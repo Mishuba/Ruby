@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ClEDmC4UivUuXXtr1QdP+7x2yNqNCWAiQtmQir/XRLcYCIMq3gcLieFEOeJDAyxXwYoNP4nyjMxGPKcVDcq9qA==",
+  "dgSpecHash": "NMKO4zrBaAM6vlu56MraaZ0rQhDTc/OfIKJgBvjXYKrQlQsG3EYl9PLvJqah5yVMS1JoRD0dslTIn9jEWMco9g==",
   "success": true,
-  "projectFilePath": "C:\\RobotNameHere(ReplaceLater)\\EmailBlast\\.local\\",
+  "projectFilePath": "C:\\Repository\\Robots\\Ruby\\EmailBlast\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\18502\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",

@@ -8147,9 +8147,9 @@
     "restore": {
       "projectUniqueName": "EmailBlast",
       "projectName": "EmailBlast",
-      "projectPath": "C:\\RobotNameHere(ReplaceLater)\\EmailBlast\\.local",
+      "projectPath": "C:\\Repository\\Robots\\Ruby\\EmailBlast\\.local",
       "packagesPath": "C:\\Users\\18502\\.nuget\\packages\\",
-      "outputPath": "C:\\RobotNameHere(ReplaceLater)\\EmailBlast\\.local"
+      "outputPath": "C:\\Repository\\Robots\\Ruby\\EmailBlast\\.local"
     },
     "frameworks": {
       "net461": {
