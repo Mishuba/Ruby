@@ -34,11 +34,26 @@ create table Press (
     City varchar (100) not null
 );
 
-create table Personal (
+create table Family (
     primary key id,
-    PersonalName varchar 200 not null,
-    Email varchar 200 not null,
-    PhoneNumber varchar 200 not null,
+    FirstName varchar (50) not null,
+    LastName varchar (50) not null,
+    Birthday varchar (50) not null,
+    Website varchar (100) not null,
+    Email varchar (100) not null,
+    PhoneNumber int not null,
+    FamilyAddress varchar (150) not null,
+    FamilyCity varchar (50) not null,
+    FamilyState varchar (100) not null,
+    FamilyCountry varchar (50) not null,
+    FamilyContinent varchar (100) not null,
+    FamilyPlanet varchar (200) not null,
+    FavoriteColor varchar (50) not null,
+    FavoriteDrink varchar (150) not null,
+    Hobby varchar (100) not null,
+    ZodiacSign varchar (100) not null,
+    ChineseZodiac varchar (100) not null,
+    
 );
 
 
