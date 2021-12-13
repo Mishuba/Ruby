@@ -53,6 +53,11 @@ create table Family (
     Hobby varchar (100) not null,
     ZodiacSign varchar (100) not null,
     ChineseZodiac varchar (100) not null,
+    BusinessPersonalityType varchar (50) not null
+    LearningType varchar (50) not null,
+    LoveLanguage varchar (50) not null,
+    SpiritAnimal varchar (100) not null,
+    Religion varchar (75) not null,
     
 );
 
