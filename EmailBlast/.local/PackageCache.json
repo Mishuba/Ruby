@@ -199,6 +199,53 @@
         "C:\\Users\\18502\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\18502\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.PowerPoint.Activities",
+        "Version": "0.1.0-preview"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\microsoft.visualstudio.ole.interop/16.7.30328.74\\lib/net45/Microsoft.VisualStudio.OLE.Interop.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities/0.1.0-preview\\lib/net461/UiPath.PowerPoint.Activities.Design.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities/0.1.0-preview\\lib/net461/UiPath.PowerPoint.Activities.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities/0.1.0-preview\\lib/net461/UiPath.PowerPoint.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities\\0.1.0-preview"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Word.Activities",
+        "Version": "1.8.0-preview"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/Interop.Domino.UiPath.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/Office.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/UiPath.Word.Activities.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/UiPath.Word.Activities.Package.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities/1.8.0-preview\\lib/net461/UiPath.Word.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\xceed.document.net/2.0.21359.11160\\lib/net40/Xceed.Document.NET.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\xceed.pdf/2.0.21359.11160\\lib/net40/Xceed.Pdf.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\xceed.words.net/2.0.21359.11160\\lib/net40/Xceed.Words.NET.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview"
+    },
+    {
+      "Package": {
+        "Id": "CopyFromUiPath.Word.Activities",
+        "Version": "1.5.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities/1.5.3\\lib/net461/UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities/1.5.3\\lib/net461/UiPath.Word.Activities.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities/1.5.3\\lib/net461/UiPath.Word.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\docx/1.0.0.18\\lib/net40/DocX.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities\\1.5.3"
     }
   ],
   "Conflicts": [],
@@ -210,6 +257,16 @@
         {
           "Item1": "DocumentFormat.OpenXml",
           "Item2": "[2.5.0, )"
+        }
+      ]
+    },
+    "CopyFromUiPath.Word.Activities": {
+      "Id": "CopyFromUiPath.Word.Activities",
+      "Version": "1.5.3",
+      "Dependencies": [
+        {
+          "Item1": "DocX",
+          "Item2": "[1.0.0.18, )"
         }
       ]
     },
@@ -230,6 +287,11 @@
     "DocumentFormat.OpenXml": {
       "Id": "DocumentFormat.OpenXml",
       "Version": "2.5.0",
+      "Dependencies": []
+    },
+    "DocX": {
+      "Id": "DocX",
+      "Version": "1.0.0.18",
       "Dependencies": []
     },
     "Google.Apis": {
@@ -1270,6 +1332,24 @@
         }
       ]
     },
+    "UiPath.PowerPoint.Activities": {
+      "Id": "UiPath.PowerPoint.Activities",
+      "Version": "0.1.0-preview",
+      "Dependencies": [
+        {
+          "Item1": "DocumentFormat.OpenXml",
+          "Item2": "[2.5.0, )"
+        },
+        {
+          "Item1": "Microsoft.VisualStudio.OLE.Interop",
+          "Item2": "[7.10.6071, )"
+        },
+        {
+          "Item1": "SharpZipLib",
+          "Item2": "[1.0.0, )"
+        }
+      ]
+    },
     "UiPath.System.Activities": {
       "Id": "UiPath.System.Activities",
       "Version": "21.10.2",
@@ -1405,6 +1485,45 @@
           "Item2": "[2.9.1, )"
         }
       ]
+    },
+    "UiPath.Word.Activities": {
+      "Id": "UiPath.Word.Activities",
+      "Version": "1.8.0-preview",
+      "Dependencies": [
+        {
+          "Item1": "Xceed.Words.NET",
+          "Item2": "[2.0.21359.11160, )"
+        }
+      ]
+    },
+    "Xceed.Document.NET": {
+      "Id": "Xceed.Document.NET",
+      "Version": "2.0.21359.11160",
+      "Dependencies": [
+        {
+          "Item1": "Xceed.Pdf",
+          "Item2": "[2.0.21359.11160, 2.0.21359.11160]"
+        }
+      ]
+    },
+    "Xceed.Pdf": {
+      "Id": "Xceed.Pdf",
+      "Version": "2.0.21359.11160",
+      "Dependencies": []
+    },
+    "Xceed.Words.NET": {
+      "Id": "Xceed.Words.NET",
+      "Version": "2.0.21359.11160",
+      "Dependencies": [
+        {
+          "Item1": "Xceed.Document.NET",
+          "Item2": "[2.0.21359.11160, 2.0.21359.11160]"
+        },
+        {
+          "Item1": "Xceed.Pdf",
+          "Item2": "[2.0.21359.11160, 2.0.21359.11160]"
+        }
+      ]
     }
   },
   "AllPackages": [
@@ -1417,6 +1536,18 @@
         "C:\\Users\\18502\\.nuget\\packages\\closedxml\\0.87.1\\lib\\net40\\ClosedXML.dll"
       ],
       "Path": "C:\\Users\\18502\\.nuget\\packages\\closedxml\\0.87.1"
+    },
+    {
+      "Package": {
+        "Id": "CopyFromUiPath.Word.Activities",
+        "Version": "1.5.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities\\1.5.3\\lib\\net461\\UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities\\1.5.3\\lib\\net461\\UiPath.Word.Activities.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities\\1.5.3\\lib\\net461\\UiPath.Word.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities\\1.5.3"
     },
     {
       "Package": {
@@ -1437,6 +1568,16 @@
         "C:\\Users\\18502\\.nuget\\packages\\documentformat.openxml\\2.5.0\\lib\\DocumentFormat.OpenXml.dll"
       ],
       "Path": "C:\\Users\\18502\\.nuget\\packages\\documentformat.openxml\\2.5.0"
+    },
+    {
+      "Package": {
+        "Id": "DocX",
+        "Version": "1.0.0.18"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\docx\\1.0.0.18\\lib\\net40\\DocX.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\docx\\1.0.0.18"
     },
     {
       "Package": {
@@ -2341,6 +2482,18 @@
     },
     {
       "Package": {
+        "Id": "UiPath.PowerPoint.Activities",
+        "Version": "0.1.0-preview"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities\\0.1.0-preview\\lib\\net461\\UiPath.PowerPoint.Activities.Design.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities\\0.1.0-preview\\lib\\net461\\UiPath.PowerPoint.Activities.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities\\0.1.0-preview\\lib\\net461\\UiPath.PowerPoint.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities\\0.1.0-preview"
+    },
+    {
+      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "21.10.2"
       },
@@ -2394,6 +2547,52 @@
         "C:\\Users\\18502\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\18502\\.nuget\\packages\\uipath.vision\\3.1.4"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Word.Activities",
+        "Version": "1.8.0-preview"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\Interop.Domino.UiPath.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\Office.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\UiPath.Word.Activities.Design.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\UiPath.Word.Activities.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\UiPath.Word.Activities.Package.dll",
+        "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\lib\\net461\\UiPath.Word.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview"
+    },
+    {
+      "Package": {
+        "Id": "Xceed.Document.NET",
+        "Version": "2.0.21359.11160"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\xceed.document.net\\2.0.21359.11160\\lib\\net40\\Xceed.Document.NET.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\xceed.document.net\\2.0.21359.11160"
+    },
+    {
+      "Package": {
+        "Id": "Xceed.Pdf",
+        "Version": "2.0.21359.11160"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\xceed.pdf\\2.0.21359.11160\\lib\\net40\\Xceed.Pdf.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\xceed.pdf\\2.0.21359.11160"
+    },
+    {
+      "Package": {
+        "Id": "Xceed.Words.NET",
+        "Version": "2.0.21359.11160"
+      },
+      "Assemblies": [
+        "C:\\Users\\18502\\.nuget\\packages\\xceed.words.net\\2.0.21359.11160\\lib\\net40\\Xceed.Words.NET.dll"
+      ],
+      "Path": "C:\\Users\\18502\\.nuget\\packages\\xceed.words.net\\2.0.21359.11160"
     }
   ]
 }

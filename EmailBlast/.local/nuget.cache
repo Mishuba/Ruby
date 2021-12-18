@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "NMKO4zrBaAM6vlu56MraaZ0rQhDTc/OfIKJgBvjXYKrQlQsG3EYl9PLvJqah5yVMS1JoRD0dslTIn9jEWMco9g==",
+  "dgSpecHash": "vR02wQMv1xP3PtFlqAxcQ2HT/oCfW22udk46eutm8bnJL2FhDmb9b6K8Yq4sl775jpswVw6eK72yZiUVjQVAnQ==",
   "success": true,
   "projectFilePath": "C:\\Repository\\Robots\\Ruby\\EmailBlast\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\18502\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\copyfromuipath.word.activities\\1.5.3\\copyfromuipath.word.activities.1.5.3.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\docx\\1.0.0.18\\docx.1.0.0.18.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\google.apis\\1.43.0\\google.apis.1.43.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\google.apis.auth\\1.43.0\\google.apis.auth.1.43.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\google.apis.calendar.v3\\1.43.0.1872\\google.apis.calendar.v3.1.43.0.1872.nupkg.sha512",
@@ -95,10 +97,15 @@
     "C:\\Users\\18502\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\uipath.ocr.activities.3.3.2.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1\\uipath.ocr.contracts.2.9.1.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.platform\\21.10.0\\uipath.platform.21.10.0.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\uipath.powerpoint.activities\\0.1.0-preview\\uipath.powerpoint.activities.0.1.0-preview.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.system.activities\\21.10.2\\uipath.system.activities.21.10.2.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\uipath.telemetry.client.1.5.3.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\uipath.uiautomation.activities.21.10.3.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.vision\\3.1.4\\uipath.vision.3.1.4.nupkg.sha512"
+    "C:\\Users\\18502\\.nuget\\packages\\uipath.vision\\3.1.4\\uipath.vision.3.1.4.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\uipath.word.activities\\1.8.0-preview\\uipath.word.activities.1.8.0-preview.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\xceed.document.net\\2.0.21359.11160\\xceed.document.net.2.0.21359.11160.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\xceed.pdf\\2.0.21359.11160\\xceed.pdf.2.0.21359.11160.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\xceed.words.net\\2.0.21359.11160\\xceed.words.net.2.0.21359.11160.nupkg.sha512"
   ],
   "logs": []
 }
