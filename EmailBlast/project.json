@@ -5,11 +5,11 @@
   "dependencies": {
     "CopyFromUiPath.Word.Activities": "[1.5.3]",
     "UiPath.Database.Activities": "[1.5.0]",
-    "UiPath.Excel.Activities": "[2.11.4]",
-    "UiPath.Mail.Activities": "[1.12.2]",
+    "UiPath.Excel.Activities": "[2.12.0-preview]",
+    "UiPath.Mail.Activities": "[1.13.0-preview]",
     "UiPath.PowerPoint.Activities": "[0.1.0-preview]",
-    "UiPath.System.Activities": "[21.10.2]",
-    "UiPath.UIAutomation.Activities": "[21.10.3]",
+    "UiPath.System.Activities": "[21.12.0-preview]",
+    "UiPath.UIAutomation.Activities": "[21.12.0-preview]",
     "UiPath.Word.Activities": "[1.8.0-preview]"
   },
   "webServices": [],
