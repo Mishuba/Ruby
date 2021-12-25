@@ -2,51 +2,6 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "AWSSDK.Comprehend/3.5.0.11": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.5.1.9, 3.6.0)"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.Comprehend.dll": {}
-        }
-      },
-      "AWSSDK.ComprehendMedical/3.5.0.11": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.5.1.9, 3.6.0)"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.ComprehendMedical.dll": {}
-        }
-      },
-      "AWSSDK.Core/3.5.1.9": {
-        "type": "package",
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.Core.dll": {}
-        }
-      },
-      "AWSSDK.Rekognition/3.3.100": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.3.100, 3.4.0)"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.Rekognition.dll": {}
-        }
-      },
       "BitMiracle.Docotic.Pdf/7.5.11645": {
         "type": "package",
         "compile": {
@@ -2773,57 +2728,6 @@
           "lib/net461/UiPath.Adobe.AdobeSign.dll": {}
         }
       },
-      "UiPath.Amazon.Comprehend.Activities/1.0.5": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Comprehend": "3.5.0.11",
-          "AWSSDK.ComprehendMedical": "3.5.0.11",
-          "DotNetProjects.WpfToolkit.Input": "6.0.84",
-          "Newtonsoft.Json": "12.0.3",
-          "System.ComponentModel.Annotations": "4.7.0",
-          "System.IO.Abstractions": "12.0.8",
-          "System.ValueTuple": "4.5.0",
-          "UiPath.Telemetry.Client": "1.3.18"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/ActiproSoftware.Shared.Wpf.dll": {},
-          "lib/net461/UiPath.AmazonComprehend.Activities.Design.dll": {},
-          "lib/net461/UiPath.AmazonComprehend.Activities.dll": {},
-          "lib/net461/UiPath.AmazonComprehend.dll": {}
-        }
-      },
-      "UiPath.Amazon.Rekognition.Activities/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Rekognition": "[3.3.100, 4.0.0)",
-          "UiPath.Amazon.Scope.Activities": "[1.1.0, 2.0.0)"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/UiPath.Amazon.Rekognition.Activities.Design.dll": {},
-          "lib/net461/UiPath.Amazon.Rekognition.Activities.dll": {},
-          "lib/net461/UiPath.Amazon.Rekognition.dll": {}
-        }
-      },
-      "UiPath.Amazon.Scope.Activities/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.3.100, 4.0.0)"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/Amazon.Activities.dll": {},
-          "lib/net461/Amazon.dll": {},
-          "lib/net461/UiPath.Amazon.Activities.Design.dll": {}
-        }
-      },
       "UiPath.CefSharpBundle/1.6.0": {
         "type": "package",
         "compile": {
@@ -3514,14 +3418,14 @@
           }
         }
       },
-      "UiPath.Form.Activities/1.7.1": {
+      "UiPath.Form.Activities/1.8.0": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "4.3.1",
           "System.IO.Abstractions": "3.0.10",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "System.Threading.Tasks.Extensions": "4.5.1",
-          "UiPath.FormActivityLibrary": "1.7.1",
+          "UiPath.FormActivityLibrary": "1.8.0",
           "UiPath.Telemetry.Client": "1.5.3"
         },
         "compile": {
@@ -3735,7 +3639,7 @@
           }
         }
       },
-      "UiPath.FormActivityLibrary/1.7.1": {
+      "UiPath.FormActivityLibrary/1.8.0": {
         "type": "package",
         "dependencies": {
           "NamedPipeWrapper": "1.5.0",
@@ -3743,7 +3647,7 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "System.ValueTuple": "4.3.0",
           "UiPath.CefSharpBundle": "1.6.0",
-          "UiPath.FormActivityLibrary.Contracts": "1.7.0"
+          "UiPath.FormActivityLibrary.Contracts": "1.8.0"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -3791,7 +3695,7 @@
           }
         }
       },
-      "UiPath.FormActivityLibrary.Contracts/1.7.0": {
+      "UiPath.FormActivityLibrary.Contracts/1.8.0": {
         "type": "package",
         "compile": {
           "lib/net461/_._": {}
@@ -5795,51 +5699,6 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win10-x64": {
-      "AWSSDK.Comprehend/3.5.0.11": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.5.1.9, 3.6.0)"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.Comprehend.dll": {}
-        }
-      },
-      "AWSSDK.ComprehendMedical/3.5.0.11": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.5.1.9, 3.6.0)"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.ComprehendMedical.dll": {}
-        }
-      },
-      "AWSSDK.Core/3.5.1.9": {
-        "type": "package",
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.Core.dll": {}
-        }
-      },
-      "AWSSDK.Rekognition/3.3.100": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.3.100, 3.4.0)"
-        },
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/AWSSDK.Rekognition.dll": {}
-        }
-      },
       "BitMiracle.Docotic.Pdf/7.5.11645": {
         "type": "package",
         "compile": {
@@ -8438,57 +8297,6 @@
           "lib/net461/UiPath.Adobe.AdobeSign.dll": {}
         }
       },
-      "UiPath.Amazon.Comprehend.Activities/1.0.5": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Comprehend": "3.5.0.11",
-          "AWSSDK.ComprehendMedical": "3.5.0.11",
-          "DotNetProjects.WpfToolkit.Input": "6.0.84",
-          "Newtonsoft.Json": "12.0.3",
-          "System.ComponentModel.Annotations": "4.7.0",
-          "System.IO.Abstractions": "12.0.8",
-          "System.ValueTuple": "4.5.0",
-          "UiPath.Telemetry.Client": "1.3.18"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/ActiproSoftware.Shared.Wpf.dll": {},
-          "lib/net461/UiPath.AmazonComprehend.Activities.Design.dll": {},
-          "lib/net461/UiPath.AmazonComprehend.Activities.dll": {},
-          "lib/net461/UiPath.AmazonComprehend.dll": {}
-        }
-      },
-      "UiPath.Amazon.Rekognition.Activities/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Rekognition": "[3.3.100, 4.0.0)",
-          "UiPath.Amazon.Scope.Activities": "[1.1.0, 2.0.0)"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/UiPath.Amazon.Rekognition.Activities.Design.dll": {},
-          "lib/net461/UiPath.Amazon.Rekognition.Activities.dll": {},
-          "lib/net461/UiPath.Amazon.Rekognition.dll": {}
-        }
-      },
-      "UiPath.Amazon.Scope.Activities/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[3.3.100, 4.0.0)"
-        },
-        "compile": {
-          "lib/net461/_._": {}
-        },
-        "runtime": {
-          "lib/net461/Amazon.Activities.dll": {},
-          "lib/net461/Amazon.dll": {},
-          "lib/net461/UiPath.Amazon.Activities.Design.dll": {}
-        }
-      },
       "UiPath.CefSharpBundle/1.6.0": {
         "type": "package",
         "compile": {
@@ -9179,14 +8987,14 @@
           }
         }
       },
-      "UiPath.Form.Activities/1.7.1": {
+      "UiPath.Form.Activities/1.8.0": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "4.3.1",
           "System.IO.Abstractions": "3.0.10",
           "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "System.Threading.Tasks.Extensions": "4.5.1",
-          "UiPath.FormActivityLibrary": "1.7.1",
+          "UiPath.FormActivityLibrary": "1.8.0",
           "UiPath.Telemetry.Client": "1.5.3"
         },
         "compile": {
@@ -9400,7 +9208,7 @@
           }
         }
       },
-      "UiPath.FormActivityLibrary/1.7.1": {
+      "UiPath.FormActivityLibrary/1.8.0": {
         "type": "package",
         "dependencies": {
           "NamedPipeWrapper": "1.5.0",
@@ -9408,7 +9216,7 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "System.ValueTuple": "4.3.0",
           "UiPath.CefSharpBundle": "1.6.0",
-          "UiPath.FormActivityLibrary.Contracts": "1.7.0"
+          "UiPath.FormActivityLibrary.Contracts": "1.8.0"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -9456,7 +9264,7 @@
           }
         }
       },
-      "UiPath.FormActivityLibrary.Contracts/1.7.0": {
+      "UiPath.FormActivityLibrary.Contracts/1.8.0": {
         "type": "package",
         "compile": {
           "lib/net461/_._": {}
@@ -11461,132 +11269,6 @@
     }
   },
   "libraries": {
-    "AWSSDK.Comprehend/3.5.0.11": {
-      "sha512": "xLm9+CLOdMEbaPD1jKY210HBFrfRYEPNJ1EE0VRSFJrLyQ9LoWFmkVb4sA32RQz1EhS5tvMI85+5LpSbp1Av2g==",
-      "type": "package",
-      "path": "awssdk.comprehend/3.5.0.11",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "analyzers/dotnet/cs/AWSSDK.Comprehend.CodeAnalysis.dll",
-        "awssdk.comprehend.3.5.0.11.nupkg.sha512",
-        "awssdk.comprehend.nuspec",
-        "lib/net35/AWSSDK.Comprehend.dll",
-        "lib/net35/AWSSDK.Comprehend.pdb",
-        "lib/net35/AWSSDK.Comprehend.xml",
-        "lib/net45/AWSSDK.Comprehend.dll",
-        "lib/net45/AWSSDK.Comprehend.pdb",
-        "lib/net45/AWSSDK.Comprehend.xml",
-        "lib/netcoreapp3.1/AWSSDK.Comprehend.dll",
-        "lib/netcoreapp3.1/AWSSDK.Comprehend.pdb",
-        "lib/netcoreapp3.1/AWSSDK.Comprehend.xml",
-        "lib/netstandard1.3/AWSSDK.Comprehend.dll",
-        "lib/netstandard1.3/AWSSDK.Comprehend.pdb",
-        "lib/netstandard1.3/AWSSDK.Comprehend.xml",
-        "lib/netstandard2.0/AWSSDK.Comprehend.dll",
-        "lib/netstandard2.0/AWSSDK.Comprehend.pdb",
-        "lib/netstandard2.0/AWSSDK.Comprehend.xml",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
-    "AWSSDK.ComprehendMedical/3.5.0.11": {
-      "sha512": "wuf/ELsGNeASJTN6VzJMWYT6HbtR/0SS9WbNV2w+khpFutYcKuEYlUzrM6pCfisRaRJH29cuoWLDKVRR+mQMug==",
-      "type": "package",
-      "path": "awssdk.comprehendmedical/3.5.0.11",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "analyzers/dotnet/cs/AWSSDK.ComprehendMedical.CodeAnalysis.dll",
-        "awssdk.comprehendmedical.3.5.0.11.nupkg.sha512",
-        "awssdk.comprehendmedical.nuspec",
-        "lib/net35/AWSSDK.ComprehendMedical.dll",
-        "lib/net35/AWSSDK.ComprehendMedical.pdb",
-        "lib/net35/AWSSDK.ComprehendMedical.xml",
-        "lib/net45/AWSSDK.ComprehendMedical.dll",
-        "lib/net45/AWSSDK.ComprehendMedical.pdb",
-        "lib/net45/AWSSDK.ComprehendMedical.xml",
-        "lib/netcoreapp3.1/AWSSDK.ComprehendMedical.dll",
-        "lib/netcoreapp3.1/AWSSDK.ComprehendMedical.pdb",
-        "lib/netcoreapp3.1/AWSSDK.ComprehendMedical.xml",
-        "lib/netstandard1.3/AWSSDK.ComprehendMedical.dll",
-        "lib/netstandard1.3/AWSSDK.ComprehendMedical.pdb",
-        "lib/netstandard1.3/AWSSDK.ComprehendMedical.xml",
-        "lib/netstandard2.0/AWSSDK.ComprehendMedical.dll",
-        "lib/netstandard2.0/AWSSDK.ComprehendMedical.pdb",
-        "lib/netstandard2.0/AWSSDK.ComprehendMedical.xml",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
-    "AWSSDK.Core/3.5.1.9": {
-      "sha512": "R2QvghxAOOc1gejmqdU4MlTCJ4g7yAz2t9Qy7mic9CRCjfYTSgcIiNM1h26oU/CZaGNHAK/FJG3CFYV2bALE0w==",
-      "type": "package",
-      "path": "awssdk.core/3.5.1.9",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "awssdk.core.3.5.1.9.nupkg.sha512",
-        "awssdk.core.nuspec",
-        "lib/net35/AWSSDK.Core.dll",
-        "lib/net35/AWSSDK.Core.pdb",
-        "lib/net35/AWSSDK.Core.xml",
-        "lib/net45/AWSSDK.Core.dll",
-        "lib/net45/AWSSDK.Core.pdb",
-        "lib/net45/AWSSDK.Core.xml",
-        "lib/netcoreapp3.1/AWSSDK.Core.dll",
-        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
-        "lib/netcoreapp3.1/AWSSDK.Core.xml",
-        "lib/netstandard1.3/AWSSDK.Core.dll",
-        "lib/netstandard1.3/AWSSDK.Core.pdb",
-        "lib/netstandard1.3/AWSSDK.Core.xml",
-        "lib/netstandard2.0/AWSSDK.Core.dll",
-        "lib/netstandard2.0/AWSSDK.Core.pdb",
-        "lib/netstandard2.0/AWSSDK.Core.xml",
-        "tools/account-management.ps1"
-      ]
-    },
-    "AWSSDK.Rekognition/3.3.100": {
-      "sha512": "HnIx2YnA/Gl0DMM5MeBhMwJ3QcYzu0k15a5qR4+bhsNkjwe40MD26uOxDyDAqX0X7h7EvKTvIeNLORm2CeurGw==",
-      "type": "package",
-      "path": "awssdk.rekognition/3.3.100",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "analyzers/dotnet/cs/AWSSDK.Rekognition.CodeAnalysis.dll",
-        "awssdk.rekognition.3.3.100.nupkg.sha512",
-        "awssdk.rekognition.nuspec",
-        "lib/MonoAndroid10/AWSSDK.Rekognition.XML",
-        "lib/MonoAndroid10/AWSSDK.Rekognition.dll",
-        "lib/MonoTouch10/AWSSDK.Rekognition.XML",
-        "lib/MonoTouch10/AWSSDK.Rekognition.dll",
-        "lib/MonoTouch10/AWSSDK.Rekognition.pdb",
-        "lib/Xamarin.iOS10/AWSSDK.Rekognition.XML",
-        "lib/Xamarin.iOS10/AWSSDK.Rekognition.dll",
-        "lib/net35/AWSSDK.Rekognition.dll",
-        "lib/net35/AWSSDK.Rekognition.pdb",
-        "lib/net35/AWSSDK.Rekognition.xml",
-        "lib/net45/AWSSDK.Rekognition.dll",
-        "lib/net45/AWSSDK.Rekognition.pdb",
-        "lib/net45/AWSSDK.Rekognition.xml",
-        "lib/netstandard1.3/AWSSDK.Rekognition.dll",
-        "lib/netstandard1.3/AWSSDK.Rekognition.pdb",
-        "lib/netstandard1.3/AWSSDK.Rekognition.xml",
-        "lib/netstandard2.0/AWSSDK.Rekognition.dll",
-        "lib/netstandard2.0/AWSSDK.Rekognition.pdb",
-        "lib/netstandard2.0/AWSSDK.Rekognition.xml",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Rekognition.XML",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Rekognition.dll",
-        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Rekognition.pdb",
-        "lib/uap/AWSSDK.Rekognition.XML",
-        "lib/uap/AWSSDK.Rekognition.dll",
-        "lib/uap/AWSSDK.Rekognition.pdb",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
     "BitMiracle.Docotic.Pdf/7.5.11645": {
       "sha512": "AWOr57jNBLVm/gMPah2Orlw076e5L7CfXINIaa5mU+u7s/qpfhdFh0FsVfcIR+Qlz1E4Fqe8/w/3kknJPF+VOw==",
       "type": "package",
@@ -16394,48 +16076,6 @@
         "uipath.adobe.adobesign.activities.nuspec"
       ]
     },
-    "UiPath.Amazon.Comprehend.Activities/1.0.5": {
-      "sha512": "0BV4Ic050CsKvyKzOz6KW2cGl2jtzRRzjHklhkaQJNGdWjht377kHGpJoLbCJzvn13/oNJfl95uB+TnjSTAjZw==",
-      "type": "package",
-      "path": "uipath.amazon.comprehend.activities/1.0.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/LICENSE.TXT",
-        "lib/net461/ActiproSoftware.Shared.Wpf.dll",
-        "lib/net461/UiPath.AmazonComprehend.Activities.Design.dll",
-        "lib/net461/UiPath.AmazonComprehend.Activities.dll",
-        "lib/net461/UiPath.AmazonComprehend.dll",
-        "uipath.amazon.comprehend.activities.1.0.5.nupkg.sha512",
-        "uipath.amazon.comprehend.activities.nuspec"
-      ]
-    },
-    "UiPath.Amazon.Rekognition.Activities/1.1.0": {
-      "sha512": "W1GFV8KM8IdNs4M8Pwl9sHvIzSJldZftk/C3E3OfHdbXdKeDbPB+dheRMANXp7rhLiTLbinhcWjGb9nn6j8Omg==",
-      "type": "package",
-      "path": "uipath.amazon.rekognition.activities/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net461/UiPath.Amazon.Rekognition.Activities.Design.dll",
-        "lib/net461/UiPath.Amazon.Rekognition.Activities.dll",
-        "lib/net461/UiPath.Amazon.Rekognition.dll",
-        "uipath.amazon.rekognition.activities.1.1.0.nupkg.sha512",
-        "uipath.amazon.rekognition.activities.nuspec"
-      ]
-    },
-    "UiPath.Amazon.Scope.Activities/1.1.0": {
-      "sha512": "mc5GQT0aSM7lzf1ORdxDUdCJKfLUj8ALz2tT9UsIYnZ7xvGGlOvIr+rVuI6UduPxA2AAuAkpqqexzfhY9ozqMQ==",
-      "type": "package",
-      "path": "uipath.amazon.scope.activities/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net461/Amazon.Activities.dll",
-        "lib/net461/Amazon.dll",
-        "lib/net461/UiPath.Amazon.Activities.Design.dll",
-        "uipath.amazon.scope.activities.1.1.0.nupkg.sha512",
-        "uipath.amazon.scope.activities.nuspec"
-      ]
-    },
     "UiPath.CefSharpBundle/1.6.0": {
       "sha512": "YpsJHxa/b81Pn51yEAUJ7fPhJLnsqVLR/5EMM3Ul675AJQp6kfBKsLMlyTYtIkKvC0Ltx6ktjXjsNRphhKXXqA==",
       "type": "package",
@@ -17015,13 +16655,12 @@
         "uipath.exchangeserver.activities.nuspec"
       ]
     },
-    "UiPath.Form.Activities/1.7.1": {
-      "sha512": "6hDZXCWmWAVtM2JWGSuBtVTJVo04WBLXi9GjMoMFAThDTTKCSlF9HHodzkksZ21EmeDyLCfib5qNEQiqCN6URw==",
+    "UiPath.Form.Activities/1.8.0": {
+      "sha512": "FCzxgO+rev7F+b8caUXsCgbl+/0dY6s5vVrfkqGo3DyAAIEL5YrBoW/Chxq6LyT2V5t6sFqcLzfc2T+v5JMvZQ==",
       "type": "package",
-      "path": "uipath.form.activities/1.7.1",
+      "path": "uipath.form.activities/1.8.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "content/web/css/bootstrap-material.css",
         "content/web/css/bootstrap.min.css",
         "content/web/css/bootstrap_materia.css",
@@ -17113,17 +16752,16 @@
         "lib/net461/zh-CN/UiPath.Form.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Form.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Form.Host.Local.resources.dll",
-        "uipath.form.activities.1.7.1.nupkg.sha512",
+        "uipath.form.activities.1.8.0.nupkg.sha512",
         "uipath.form.activities.nuspec"
       ]
     },
-    "UiPath.FormActivityLibrary/1.7.1": {
-      "sha512": "5eK0lFUCXe56+u2c16bUNJ1mYTzQqbiIhXo0mspiRxkgD8zdN/FDliTQ+vSi7I2KE3Ms+oMHj9LxrhOMXXlMEw==",
+    "UiPath.FormActivityLibrary/1.8.0": {
+      "sha512": "kpRYeyUYw5zuxA8otc/4AikpQQSivuZI2GmikgceL9wp8sNDiIRju43IXmyofmSwLrdc5BZCw4D5IGX6uktT6Q==",
       "type": "package",
-      "path": "uipath.formactivitylibrary/1.7.1",
+      "path": "uipath.formactivitylibrary/1.8.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "content/Resources/UIPATH_Logo.png",
         "content/UI/Designer/assets/fonts/fontawesome-webfont.svg",
         "content/UI/Designer/assets/fonts/glyphicons-halflings-regular.svg",
@@ -17204,12 +16842,14 @@
         "content/UI/Formio/css/callout_styles.css",
         "content/UI/Formio/css/custom.css",
         "content/UI/Formio/css/customformstyle.css",
+        "content/UI/Formio/css/flatpickr.css",
         "content/UI/Formio/css/formio.full.min.css",
         "content/UI/Formio/css/progressbar.css",
         "content/UI/Formio/css/roboto.css",
         "content/UI/Formio/jquery/jquery-1.7.1.min.js",
         "content/UI/Formio/js/FilePath.js",
         "content/UI/Formio/js/Label.js",
+        "content/UI/Formio/js/flatpickr.js",
         "content/UI/Formio/js/formio.full.min.js",
         "content/UI/Formio/js/uipath-formio-ext.js",
         "content/UI/Formio/js/uipath_apply_theme.js",
@@ -17242,19 +16882,18 @@
         "lib/net461/ru/UiPath.Form.Host.Local.resources.dll",
         "lib/net461/tr/UiPath.Form.Host.Local.resources.dll",
         "lib/net461/zh-CN/UiPath.Form.Host.Local.resources.dll",
-        "uipath.formactivitylibrary.1.7.1.nupkg.sha512",
+        "uipath.formactivitylibrary.1.8.0.nupkg.sha512",
         "uipath.formactivitylibrary.nuspec"
       ]
     },
-    "UiPath.FormActivityLibrary.Contracts/1.7.0": {
-      "sha512": "WTOgFRf3IniuBpR6txNvZeELnrTAfxBam4KuHuCEgG7KnBgKi81+vAhDf37ZLPETZ6Af4LzkAz7SfhqjbMu4+g==",
+    "UiPath.FormActivityLibrary.Contracts/1.8.0": {
+      "sha512": "TgPU1fnI2VvsFxkZbQCJREpATq6n0AY1FBGOwxUNO2Tud4VicMqmZ1N5LxRo891b4YzR+dRWzZXeeHDMvv/SNg==",
       "type": "package",
-      "path": "uipath.formactivitylibrary.contracts/1.7.0",
+      "path": "uipath.formactivitylibrary.contracts/1.8.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "lib/net461/UiPath.Form.ActivityLibrary.Contracts.dll",
-        "uipath.formactivitylibrary.contracts.1.7.0.nupkg.sha512",
+        "uipath.formactivitylibrary.contracts.1.8.0.nupkg.sha512",
         "uipath.formactivitylibrary.contracts.nuspec"
       ]
     },
@@ -19612,8 +19251,6 @@
       "CopyFromUiPath.Word.Activities >= 1.5.3 <= 1.5.3",
       "UiPath.ActiveDirectoryDomainServices.Activities >= 1.2.2 <= 1.2.2",
       "UiPath.Adobe.AdobeSign.Activities >= 1.0.5 <= 1.0.5",
-      "UiPath.Amazon.Comprehend.Activities >= 1.0.5 <= 1.0.5",
-      "UiPath.Amazon.Rekognition.Activities >= 1.1.0 <= 1.1.0",
       "UiPath.Credentials.Activities >= 2.0.0 <= 2.0.0",
       "UiPath.Cryptography.Activities >= 1.2.1 <= 1.2.1",
       "UiPath.DataRobot.Activities >= 1.2.0 <= 1.2.0",
@@ -19622,8 +19259,8 @@
       "UiPath.Excel.Activities >= 2.12.0-preview <= 2.12.0-preview",
       "UiPath.ExchangeServer.Activities >= 1.0.11 <= 1.0.11",
       "UiPath.FTP.Activities >= 2.2.0 <= 2.2.0",
-      "UiPath.Form.Activities >= 1.7.1 <= 1.7.1",
-      "UiPath.FormActivityLibrary >= 1.7.1 <= 1.7.1",
+      "UiPath.Form.Activities >= 1.8.0 <= 1.8.0",
+      "UiPath.FormActivityLibrary >= 1.8.0 <= 1.8.0",
       "UiPath.GSuite.Activities >= 1.13.2 <= 1.13.2",
       "UiPath.GoogleCloud.Activities >= 2.0.0 <= 2.0.0",
       "UiPath.GoogleSpeech.Activities >= 0.1.6850.39757 <= 0.1.6850.39757",
@@ -19677,16 +19314,6 @@
             "target": "Package",
             "version": "[1.0.5, 1.0.5]"
           },
-          "UiPath.Amazon.Comprehend.Activities": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.0.5, 1.0.5]"
-          },
-          "UiPath.Amazon.Rekognition.Activities": {
-            "include": "Runtime",
-            "target": "Package",
-            "version": "[1.1.0, 1.1.0]"
-          },
           "UiPath.Credentials.Activities": {
             "include": "Runtime",
             "target": "Package",
@@ -19730,12 +19357,12 @@
           "UiPath.Form.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.7.1, 1.7.1]"
+            "version": "[1.8.0, 1.8.0]"
           },
           "UiPath.FormActivityLibrary": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.7.1, 1.7.1]"
+            "version": "[1.8.0, 1.8.0]"
           },
           "UiPath.GSuite.Activities": {
             "include": "Runtime",
@@ -19856,16 +19483,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Version conflict detected for AWSSDK.Core. Install/reference AWSSDK.Core 3.5.1.9 directly to project EmailBlast to resolve this issue. \r\n EmailBlast -> UiPath.Amazon.Comprehend.Activities 1.0.5 -> AWSSDK.ComprehendMedical 3.5.0.11 -> AWSSDK.Core (>= 3.5.1.9 && < 3.6.0) \r\n EmailBlast -> UiPath.Amazon.Rekognition.Activities 1.1.0 -> AWSSDK.Rekognition 3.3.100 -> AWSSDK.Core (>= 3.3.100 && < 3.4.0).",
-      "libraryId": "AWSSDK.Core",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1"
-      ]
-    }
-  ]
+  }
 }

@@ -1,13 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "3qDyMdU4oTswvvYQaF0YZy6SWsBtAd8x0r3s4dor2K7e+jJ5Gt351QqMTNmP28RgxRt6umHV9cBkaSJReR+Fyw==",
-  "success": false,
+  "dgSpecHash": "uG2Qk5umc1ccT27xXsVNGR6FbhU+TxoEjF756p2oOcXs+lCQh1SEoOtZSUClyh6yZH6OfbF00RLhTelPYy/grQ==",
+  "success": true,
   "projectFilePath": "C:\\Repository\\Robots\\Ruby\\EmailBlast\\.local\\",
   "expectedPackageFiles": [
-    "C:\\Users\\18502\\.nuget\\packages\\awssdk.comprehend\\3.5.0.11\\awssdk.comprehend.3.5.0.11.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\awssdk.comprehendmedical\\3.5.0.11\\awssdk.comprehendmedical.3.5.0.11.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\awssdk.core\\3.5.1.9\\awssdk.core.3.5.1.9.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\awssdk.rekognition\\3.3.100\\awssdk.rekognition.3.3.100.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\bitmiracle.docotic.pdf\\7.5.11645\\bitmiracle.docotic.pdf.7.5.11645.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\bouncycastle.crypto.dll\\1.8.1\\bouncycastle.crypto.dll.1.8.1.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\castle.core\\4.3.1\\castle.core.4.3.1.nupkg.sha512",
@@ -175,9 +171,6 @@
     "C:\\Users\\18502\\.nuget\\packages\\uipath.activedirectorydomainservices.activities\\1.2.2\\uipath.activedirectorydomainservices.activities.1.2.2.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.3\\uipath.activities.runtimegovernance.1.1.3.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.adobe.adobesign.activities\\1.0.5\\uipath.adobe.adobesign.activities.1.0.5.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.amazon.comprehend.activities\\1.0.5\\uipath.amazon.comprehend.activities.1.0.5.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.amazon.rekognition.activities\\1.1.0\\uipath.amazon.rekognition.activities.1.1.0.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.amazon.scope.activities\\1.1.0\\uipath.amazon.scope.activities.1.1.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.cefsharpbundle\\1.6.0\\uipath.cefsharpbundle.1.6.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.connectionclient\\1.1.1\\uipath.connectionclient.1.1.1.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.coreipc\\2.0.1\\uipath.coreipc.2.0.1.nupkg.sha512",
@@ -188,9 +181,9 @@
     "C:\\Users\\18502\\.nuget\\packages\\uipath.documentunderstanding.orchestrator\\1.2.0\\uipath.documentunderstanding.orchestrator.1.2.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.excel.activities\\2.12.0-preview\\uipath.excel.activities.2.12.0-preview.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.exchangeserver.activities\\1.0.11\\uipath.exchangeserver.activities.1.0.11.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.form.activities\\1.7.1\\uipath.form.activities.1.7.1.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.formactivitylibrary\\1.7.1\\uipath.formactivitylibrary.1.7.1.nupkg.sha512",
-    "C:\\Users\\18502\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\1.7.0\\uipath.formactivitylibrary.contracts.1.7.0.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\uipath.form.activities\\1.8.0\\uipath.form.activities.1.8.0.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\uipath.formactivitylibrary\\1.8.0\\uipath.formactivitylibrary.1.8.0.nupkg.sha512",
+    "C:\\Users\\18502\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\1.8.0\\uipath.formactivitylibrary.contracts.1.8.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.ftp.activities\\2.2.0\\uipath.ftp.activities.2.2.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.googlecloud.activities\\2.0.0\\uipath.googlecloud.activities.2.0.0.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\uipath.googlespeech.activities\\0.1.6850.39757\\uipath.googlespeech.activities.0.1.6850.39757.nupkg.sha512",
@@ -227,16 +220,5 @@
     "C:\\Users\\18502\\.nuget\\packages\\xceed.words.net\\2.0.21359.11160\\xceed.words.net.2.0.21359.11160.nupkg.sha512",
     "C:\\Users\\18502\\.nuget\\packages\\zxing.net\\0.16.5\\zxing.net.0.16.5.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "filePath": "C:\\Repository\\Robots\\Ruby\\EmailBlast\\.local",
-      "message": "Version conflict detected for AWSSDK.Core. Install/reference AWSSDK.Core 3.5.1.9 directly to project EmailBlast to resolve this issue. \r\n EmailBlast -> UiPath.Amazon.Comprehend.Activities 1.0.5 -> AWSSDK.ComprehendMedical 3.5.0.11 -> AWSSDK.Core (>= 3.5.1.9 && < 3.6.0) \r\n EmailBlast -> UiPath.Amazon.Rekognition.Activities 1.1.0 -> AWSSDK.Rekognition 3.3.100 -> AWSSDK.Core (>= 3.3.100 && < 3.4.0).",
-      "libraryId": "AWSSDK.Core",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.6.1"
-      ]
-    }
-  ]
+  "logs": []
 }
