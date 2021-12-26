@@ -114,7 +114,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;starting file search&quot;]" />
-                  <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Repository\Robots\Ruby\EmailBlast\Excel\Continent" sap:VirtualizedContainerService.HintSize="596,2514" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="SizeSmallestFirst" SkipFolderWithoutPermission="False">
+                  <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Repository\Robots\Ruby\EmailBlast\Excel\Continent" sap:VirtualizedContainerService.HintSize="596,2512" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="SizeSmallestFirst" SkipFolderWithoutPermission="False">
                     <ui:ForEachFileX.Body>
                       <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                         <ActivityAction.Argument1>
@@ -123,7 +123,7 @@
                         <ActivityAction.Argument2>
                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                         </ActivityAction.Argument2>
-                        <Sequence sap:VirtualizedContainerService.HintSize="562,2265" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <Sequence sap:VirtualizedContainerService.HintSize="562,2263" sap2010:WorkflowViewState.IdRef="Sequence_19">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Default="[Work.ToString]" Name="OkNow" />
                           </Sequence.Variables>
@@ -132,13 +132,13 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,2173" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" WorkbookPath="[OkNow]">
+                          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,2171" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" WorkbookPath="[OkNow]">
                             <ueab:ExcelApplicationCard.Body>
                               <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="International" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1907" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1905" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="sd:DataTable" Name="Family" />
                                   </Sequence.Variables>
@@ -148,22 +148,22 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Reading range for &quot; +OkNow]" />
-                                  <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,167" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[International.Sheet(&quot;Everything&quot;).Range(&quot;A1:Z300&quot;)]" SaveTo="[Family]" />
+                                  <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,167" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[International.Sheet(&quot;DSP&quot;).Range(&quot;A1:Z50&quot;)]" SaveTo="[Family]" />
                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Finished next step&quot;]" />
                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Trace" Message="[&quot;Looking for emails to send.&quot;]" />
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Family]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="444,1215" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Family]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="444,1213" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1095" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1094" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[String.IsNullOrEmpty(row(&quot;Email&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="358,1003" sap2010:WorkflowViewState.IdRef="If_1">
+                                          <If Condition="[String.IsNullOrEmpty(row(&quot;Email&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="939,974" sap2010:WorkflowViewState.IdRef="If_1">
                                             <If.Then>
                                               <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                                 <sap:WorkflowViewStateService.ViewState>
@@ -175,24 +175,22 @@
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="518,845" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="518,816" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="476,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Trying to senf email to &quot; + row(&quot;Name&quot;).ToString + &quot; from &quot; + row(&quot;Country&quot;).ToString]" />
-                                                <Sequence sap:VirtualizedContainerService.HintSize="476,622" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="476,593" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Account="[Ruby]" Body="[&quot;What's Up &quot; + row(&quot;name&quot;).ToString + &quot;.&quot; + Environment.NewLine + Environment.NewLine + &quot;This is Ruby. I am the robotic assistant to my creator the artist 'Mishuba'.  I will be sending you different emails about all things entertainment related to my creator.&quot; + Environment.NewLine + Environment.NewLine + &quot;I have attached a clean version of his song 'Meditation' from his Album 'Mae' to this email, as well as provide important links.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find the album 'Mae' on&quot; + Environment.NewLine + Environment.NewLine + &quot;Spotify (https://open.spotify.com/album/0EkGRvHWqVqCzrJYNoN0PZ?si=-9mif6sjS7Oa4NeNbqKECA)&quot; + Environment.NewLine + Environment.NewLine + &quot;Apple (https://music.apple.com/us/album/mae/1588171337)&quot; + Environment.NewLine + Environment.NewLine + &quot;Soundcloud (https://soundcloud.com/mishuba-music/sets/mae-580879438?utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing)&quot; + Environment.NewLine + Environment.NewLine + &quot;Youtube (https://youtube.com/playlist?list=PLyt4VU_WgIQM-SgK34sk4tQHrtybUg6GK)&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find his social media on&quot; + Environment.NewLine + Environment.NewLine + &quot;Twitter at https://twitter.com/mishuba&quot; + Environment.NewLine + Environment.NewLine + &quot;Instagram at https://www.instagram.com/mishuba/&quot; + Environment.NewLine + Environment.NewLine + &quot;Sincerely &quot; + Environment.NewLine + Environment.NewLine + &quot;Ruby Detha&quot; + Environment.NewLine + Environment.NewLine + &quot;P.S.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can personally email him at mishuba14@gmail.com; if you wish to contact him for business then email his manager at hubertmaxwell34@gmail.com.&quot; + Environment.NewLine + Environment.NewLine + &quot;Good bye, until we meet again.&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,399" sap2010:WorkflowViewState.IdRef="SendMailX_7" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" ReplyTo="hubertmaxwell34@gmail.com" Sensitivity="Normal" Subject="[&quot;Hello &quot; + row(&quot;name&quot;).ToString]" To="[row(&quot;Email&quot;).ToString]" UseDocumentAsBody="False">
+                                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Account="[Ruby]" Body="[&quot;What's Up &quot; + row(&quot;name&quot;).ToString + &quot;.&quot; + Environment.NewLine + Environment.NewLine + &quot;This is Ruby. I am the robotic assistant to my creator the artist 'Mishuba'.  I will be sending you different emails about all things entertainment related to my creator.&quot; + Environment.NewLine + Environment.NewLine + &quot;I have sent a link of his song 'Meditation' from his Album 'Mae' to this email, as well as provided social media links.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find the album 'Mae' on&quot; + Environment.NewLine + Environment.NewLine + &quot;Spotify (https://open.spotify.com/album/0EkGRvHWqVqCzrJYNoN0PZ?si=-9mif6sjS7Oa4NeNbqKECA)&quot; + Environment.NewLine + Environment.NewLine + &quot;Apple (https://music.apple.com/us/album/mae/1588171337)&quot; + Environment.NewLine + Environment.NewLine + &quot;Soundcloud (https://soundcloud.com/mishuba-music/sets/mae-580879438?utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing)&quot; + Environment.NewLine + Environment.NewLine + &quot;Youtube (https://youtube.com/playlist?list=PLyt4VU_WgIQM-SgK34sk4tQHrtybUg6GK)&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find his social media on&quot; + Environment.NewLine + Environment.NewLine + &quot;Twitter at https://twitter.com/mishuba&quot; + Environment.NewLine + Environment.NewLine + &quot;Instagram at https://www.instagram.com/mishuba/&quot; + Environment.NewLine + Environment.NewLine + &quot;Sincerely &quot; + Environment.NewLine + Environment.NewLine + &quot;Ruby Detha&quot; + Environment.NewLine + Environment.NewLine + &quot;P.S.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can personally email him at mishuba14@gmail.com; if you wish to contact him for business then email his manager at hubertmaxwell34@gmail.com.&quot; + Environment.NewLine + Environment.NewLine + &quot;Good bye, until we meet again.&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,370" sap2010:WorkflowViewState.IdRef="SendMailX_7" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" ReplyTo="hubertmaxwell34@gmail.com" Sensitivity="Normal" Subject="[&quot;Hello &quot; + row(&quot;name&quot;).ToString]" To="[row(&quot;Email&quot;).ToString]" UseDocumentAsBody="False">
                                                     <umab:SendMailX.Files>
-                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                        <InArgument x:TypeArguments="x:String">Music\mp3\I'm Ready Radio Edit.mp3</InArgument>
-                                                      </scg:List>
+                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                                                     </umab:SendMailX.Files>
                                                     <umab:SendMailX.HtmlBodyFromFile>
                                                       <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
