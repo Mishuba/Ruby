@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OneCountry" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2809" sap2010:WorkflowViewState.IdRef="OneCountry_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="OneCountry" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2816" sap2010:WorkflowViewState.IdRef="OneCountry_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -94,47 +94,46 @@
       <AssemblyReference>UiPath.PowerPoint</AssemblyReference>
       <AssemblyReference>UiPath.GSuite.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Python</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OneCountry" sap:VirtualizedContainerService.HintSize="714,2744" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OneCountry" sap:VirtualizedContainerService.HintSize="714,2751" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="rubydetha@gmail.com" DisplayName="Use Gmail" EmailAddress="rubydetha@gmail.com" sap:VirtualizedContainerService.HintSize="672,2652" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="rubydetha@gmail.com" DisplayName="Use Gmail" EmailAddress="rubydetha@gmail.com" sap:VirtualizedContainerService.HintSize="672,2659" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
       <umab:GmailApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="OneCountry" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="638,2473" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="638,2480" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,2381" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,2388" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,2295" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,2302" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Getting excel file&quot;]" />
-                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,2072" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Excel\Countries\UnitedKingdom.xlsx">
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,2079" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Excel\Countries\Canada.xlsx">
                       <ueab:ExcelApplicationCard.Body>
                         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Country" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1806" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1813" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="CountryRange" />
                             </Sequence.Variables>
@@ -147,19 +146,19 @@
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Reading Range of file&quot;]" />
                             <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,167" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Country.Sheet(&quot;Everything&quot;).Range(&quot;A1:Z200&quot;)]" SaveTo="[CountryRange]" />
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Finished; Starting the email process&quot;]" />
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CountryRange]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="444,1114" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CountryRange]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="444,1121" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,995" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1002" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <If Condition="[String.IsNullOrEmpty(row(&quot;Email&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="358,903" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If Condition="[String.IsNullOrEmpty(row(&quot;Email&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="358,910" sap2010:WorkflowViewState.IdRef="If_1">
                                       <If.Then>
                                         <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -171,14 +170,14 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="476,746" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="476,753" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Trying to send email to: &quot; + row(&quot;Name&quot;).ToString + &quot; from &quot; + row(&quot;Country&quot;).ToString]" />
-                                          <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[OneCountry]" Body="[&quot;What's Up &quot; + row(&quot;name&quot;).ToString + &quot;.&quot; + Environment.NewLine + Environment.NewLine + &quot;This is Ruby. I am the robotic assistant to my creator the artist 'Mishuba'.  I will be sending you different emails about all things entertainment related to my creator.&quot; + Environment.NewLine + Environment.NewLine + &quot;I have attached a clean version of his song 'Meditation' from his Album 'Mae' to this email, as well as provide important links.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find the album 'Mae' on&quot; + Environment.NewLine + Environment.NewLine + &quot;Spotify (https://open.spotify.com/album/0EkGRvHWqVqCzrJYNoN0PZ?si=-9mif6sjS7Oa4NeNbqKECA)&quot; + Environment.NewLine + Environment.NewLine + &quot;Apple (https://music.apple.com/us/album/mae/1588171337)&quot; + Environment.NewLine + Environment.NewLine + &quot;Soundcloud (https://soundcloud.com/mishuba-music/sets/mae-580879438?utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing)&quot; + Environment.NewLine + Environment.NewLine + &quot;Youtube (https://youtube.com/playlist?list=PLyt4VU_WgIQM-SgK34sk4tQHrtybUg6GK)&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find his social media on&quot; + Environment.NewLine + Environment.NewLine + &quot;Twitter at https://twitter.com/mishuba&quot; + Environment.NewLine + Environment.NewLine + &quot;Instagram at https://www.instagram.com/mishuba/&quot; + Environment.NewLine + Environment.NewLine + &quot;Sincerely &quot; + Environment.NewLine + Environment.NewLine + &quot;Ruby Detha&quot; + Environment.NewLine + Environment.NewLine + &quot;P.S.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can personally email him at mishuba14@gmail.com; if you wish to contact him for business then email his manager at hubertmaxwell34@gmail.com.&quot; + Environment.NewLine + Environment.NewLine + &quot;Good bye, until we meet again.&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,392" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Hello &quot; + row(&quot;name&quot;).ToString]" To="[row(&quot;Email&quot;).ToString]" UseDocumentAsBody="False">
+                                          <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[OneCountry]" Body="[&quot;What's Up &quot; + row(&quot;name&quot;).ToString + &quot;.&quot; + Environment.NewLine + Environment.NewLine + &quot;This is Ruby. I am the robotic assistant to my creator the artist 'Mishuba'.  I will be sending you different emails about all things entertainment related to my creator.&quot; + Environment.NewLine + Environment.NewLine + &quot;I have attached a clean version of his song 'Meditation' from his Album 'Mae' to this email, as well as provide important links.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find the album 'Mae' on&quot; + Environment.NewLine + Environment.NewLine + &quot;Spotify (https://open.spotify.com/album/0EkGRvHWqVqCzrJYNoN0PZ?si=-9mif6sjS7Oa4NeNbqKECA)&quot; + Environment.NewLine + Environment.NewLine + &quot;Apple (https://music.apple.com/us/album/mae/1588171337)&quot; + Environment.NewLine + Environment.NewLine + &quot;Soundcloud (https://soundcloud.com/mishuba-music/sets/mae-580879438?utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_sharing)&quot; + Environment.NewLine + Environment.NewLine + &quot;Youtube (https://youtube.com/playlist?list=PLyt4VU_WgIQM-SgK34sk4tQHrtybUg6GK)&quot; + Environment.NewLine + Environment.NewLine + &quot;You can find his social media on&quot; + Environment.NewLine + Environment.NewLine + &quot;Twitter at https://twitter.com/mishuba&quot; + Environment.NewLine + Environment.NewLine + &quot;Instagram at https://www.instagram.com/mishuba/&quot; + Environment.NewLine + Environment.NewLine + &quot;Sincerely &quot; + Environment.NewLine + Environment.NewLine + &quot;Ruby Detha&quot; + Environment.NewLine + Environment.NewLine + &quot;P.S.&quot; + Environment.NewLine + Environment.NewLine + &quot;You can personally email him at mishuba14@gmail.com; if you wish to contact him for business then email his manager at hubertmaxwell34@gmail.com.&quot; + Environment.NewLine + Environment.NewLine + &quot;Good bye, until we meet again.&quot;]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,399" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Hello &quot; + row(&quot;name&quot;).ToString]" To="[row(&quot;Email&quot;).ToString]" UseDocumentAsBody="False">
                                             <umab:SendMailX.Files>
                                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                 <InArgument x:TypeArguments="x:String">Music\mp3\I'm Ready Radio Edit.mp3</InArgument>
