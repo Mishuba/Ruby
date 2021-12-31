@@ -86,7 +86,6 @@
       <AssemblyReference>UiPath.Python</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="InternationalBroadcast" sap:VirtualizedContainerService.HintSize="510,660" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -114,7 +113,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;starting file search&quot;]" />
-                  <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Repository\Robots\Ruby\EmailBlast\Excel\Continent" sap:VirtualizedContainerService.HintSize="596,2514" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="SizeSmallestFirst" SkipFolderWithoutPermission="False">
+                  <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Repository\Robots\Ruby\EmailBlast\Excel\Continent" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="SizeSmallestFirst" SkipFolderWithoutPermission="False">
                     <ui:ForEachFileX.Body>
                       <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                         <ActivityAction.Argument1>
