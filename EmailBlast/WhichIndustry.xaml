@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>953,762</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>697,1112</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WhichIndustry_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -70,15 +70,16 @@
       <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Python</AssemblyReference>
       <AssemblyReference>UiPath.PowerPoint</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WhichIndustry" sap:VirtualizedContainerService.HintSize="581,697" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WhichIndustry" sap:VirtualizedContainerService.HintSize="581,1047" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="WhichGenre" sap:VirtualizedContainerService.HintSize="539,605" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="WhichGenre" sap:VirtualizedContainerService.HintSize="539,955" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="ThisGenre" />
       </Sequence.Variables>
@@ -92,7 +93,7 @@
           <OutArgument x:TypeArguments="x:String">[ThisGenre]</OutArgument>
         </ui:InputDialog.Result>
       </ui:InputDialog>
-      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[ThisGenre]" sap:VirtualizedContainerService.HintSize="497,182" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[ThisGenre]" sap:VirtualizedContainerService.HintSize="497,532" sap2010:WorkflowViewState.IdRef="Switch`1_1">
         <Sequence x:Key="Agents" sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="[FrThisCountry]" Name="OkCountry" />
@@ -108,16 +109,18 @@
               <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Industry People\Agents.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Industry People\Agents.xlsx</InArgument>
             </Assign.Value>
           </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Country.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[FrThisCountry]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
-        <Sequence x:Key="Competition" sap:VirtualizedContainerService.HintSize="376,301" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence x:Key="Competition" sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="[FrThisCountry]" Name="OkCountry" />
             <Variable x:TypeArguments="x:String" Name="UnitedStates" />
@@ -132,7 +135,7 @@
               <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Industry People\Competition.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Industry People\Competition.xlsx</InArgument>
             </Assign.Value>
           </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Country.xaml">
@@ -141,7 +144,7 @@
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
-        <Sequence x:Key="Managers" sap:VirtualizedContainerService.HintSize="376,301" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence x:Key="Managers" sap:VirtualizedContainerService.HintSize="376,304" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="[FrThisCountry]" Name="OkCountry" />
             <Variable x:TypeArguments="x:String" Name="UnitedStates" />
@@ -156,7 +159,7 @@
               <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Industry People\Managers.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Industry People\Managers.xlsx</InArgument>
             </Assign.Value>
           </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Country.xaml">

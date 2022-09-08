@@ -1,10 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WhichGenre" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WhichGenre" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="FrThisCountry" Type="InArgument(x:String)" />
+    <x:Property Name="FrThisCountry" Type="OutArgument(x:String)" />
   </x:Members>
-  <this:WhichGenre.FrThisCountry>
-    <InArgument x:TypeArguments="x:String" />
-  </this:WhichGenre.FrThisCountry>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
@@ -63,6 +60,17 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PowerPoint</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="WhichGenre" sap:VirtualizedContainerService.HintSize="539,1021" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -95,14 +103,14 @@
             <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Music\Enemies.xlsx</InArgument>
+            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Music\Enemies.xlsx</InArgument>
           </Assign.Value>
         </Assign>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Country.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
-              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="OkCountry" />
-            </OutArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
@@ -121,13 +129,14 @@
             <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Music\HipHop.xlsx</InArgument>
+            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Music\HipHop.xlsx</InArgument>
           </Assign.Value>
         </Assign>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Country.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[OkCountry]</OutArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+            <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
@@ -146,13 +155,14 @@
             <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Music\Jazz.xlsx</InArgument>
+            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Music\Jazz.xlsx</InArgument>
           </Assign.Value>
         </Assign>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Country.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[OkCountry]</OutArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+            <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
@@ -171,13 +181,14 @@
             <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Music\Pop.xlsx</InArgument>
+            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Music\Pop.xlsx</InArgument>
           </Assign.Value>
         </Assign>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Country.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[OkCountry]</OutArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+            <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
@@ -196,13 +207,14 @@
             <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Music\R&amp;B.xlsx</InArgument>
+            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Music\R&amp;B.xlsx</InArgument>
           </Assign.Value>
         </Assign>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Country.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[OkCountry]</OutArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+            <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>
@@ -221,13 +233,14 @@
             <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Music\Rock.xlsx</InArgument>
+            <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Music\Rock.xlsx</InArgument>
           </Assign.Value>
         </Assign>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Country.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <OutArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[OkCountry]</OutArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+            <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </Sequence>

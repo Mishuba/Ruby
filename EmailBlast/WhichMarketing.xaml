@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>953,1112</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>697,1112</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WhichMarketing_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,14 +106,12 @@
               <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Marketing\Corporations.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Marketing\Corporations.xlsx</InArgument>
             </Assign.Value>
           </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Country.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FrThisCountry" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="OneCountryExcel">[FrThisCountry]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
@@ -132,7 +130,7 @@
               <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Marketing\Festivals.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Marketing\Festivals.xlsx</InArgument>
             </Assign.Value>
           </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Country.xaml">
@@ -156,7 +154,7 @@
               <OutArgument x:TypeArguments="x:String">[FrThisCountry]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Marketing\Venues.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">Excel\Tycadome\Entertainment\Marketing\Venues.xlsx</InArgument>
             </Assign.Value>
           </Assign>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Country.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Country.xaml">

@@ -102,7 +102,6 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SendEverybodyEmails" sap:VirtualizedContainerService.HintSize="476,645" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -111,7 +110,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="C:\Repository\Tech\Software Programming and Coding\Robots\Ruby\EmailBlast\Excel\Continent" sap:VirtualizedContainerService.HintSize="434,553" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="False">
+    <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="C:\Repository\Tech\Software Programming and Coding\Robots\Ruby\EmailBlast\Excel\Tycadome\Continent" sap:VirtualizedContainerService.HintSize="434,553" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="False">
       <ui:ForEachFolderX.Body>
         <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -136,9 +135,7 @@
             </Assign>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Continent.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Continent.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="ContinentFolder">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worldwide" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="ContinentFolder">[Worldwide]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="FrThisCountry" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>

@@ -53,5 +53,7 @@
   "UiPath.UIAutomationNext.Activities.Logging.EnableAuditLog": "True",
   "UiPath.UIAutomationNext.Activities.Generic.AlterIfDisabled": "False",
   "UiPath.UIAutomationNext.Activities.ApplicationCard.WebDriverMode": "Disabled",
-  "UiPath.UIAutomationNext.Activities.ApplicationCard.WebDriverAutoDownload": "True"
+  "UiPath.UIAutomationNext.Activities.ApplicationCard.WebDriverAutoDownload": "True",
+  "UiPath.UIAutomationNext.Activities.KeyboardEvents.KeyboardShortcutsDelayBetweenKeys": "0.1",
+  "UiPath.UIAutomationNext.Activities.Logging.AuditLogLevel": "Trace"
 }
