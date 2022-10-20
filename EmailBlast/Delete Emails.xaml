@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Delete_Emails" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1054,868" sap2010:WorkflowViewState.IdRef="Delete_Emails_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Delete_Emails" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,892" sap2010:WorkflowViewState.IdRef="Delete_Emails_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -85,25 +85,25 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Delete_Emails" sap:VirtualizedContainerService.HintSize="628,803" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Delete_Emails" sap:VirtualizedContainerService.HintSize="628,827" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="mishuba14@gmail.com" DisplayName="Use Gmail" EmailAddress="mishuba14@gmail.com" sap:VirtualizedContainerService.HintSize="586,711" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="mishuba14@gmail.com" DisplayName="Use Gmail" EmailAddress="mishuba14@gmail.com" sap:VirtualizedContainerService.HintSize="586,737" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
       <umab:GmailApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Ruby" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,532" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,548" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="510,440" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Ruby.Folder(&quot;Sent&quot;)]" NumberOfEmailsLimit="1000" RetrieveAttachments="False" UnreadOnly="False" WithAttachmentsOnly="False">
+            <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="510,458" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Ruby.Folder(&quot;%5BImap%5D%2FTrash&quot;)]" NumberOfEmailsLimit="1000" RetrieveAttachments="False" UnreadOnly="False" WithAttachmentsOnly="False">
               <umab:ForEachEmailX.Body>
                 <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
                   <ActivityAction.Argument1>
@@ -112,13 +112,13 @@
                   <ActivityAction.Argument2>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument2>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,191" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,199" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <umab:DeleteMailX DisplayName="Delete Email" sap:VirtualizedContainerService.HintSize="434,99" sap2010:WorkflowViewState.IdRef="DeleteMailX_1" MailMessage="[Mail]" PermanentlyDelete="True" />
+                    <umab:DeleteMailX DisplayName="Delete Email" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="DeleteMailX_1" MailMessage="[Mail]" PermanentlyDelete="True" />
                   </Sequence>
                 </ActivityAction>
               </umab:ForEachEmailX.Body>

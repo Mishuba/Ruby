@@ -3,7 +3,7 @@
   "description": "This will be my first real automation\r\n",
   "main": "Main.xaml",
   "dependencies": {
-    "Twilio": "[5.80.1]",
+    "Twilio": "[6.0.0-rc.1]",
     "UiPath.ActiveDirectoryDomainServices.Activities": "[1.3.3]",
     "UiPath.Adobe.AdobeSign.Activities": "[3.0.0]",
     "UiPath.Credentials.Activities": "[2.0.0]",
