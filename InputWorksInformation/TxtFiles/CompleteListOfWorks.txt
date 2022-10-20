@@ -1,3 +1,5 @@
+Work Title:Alternative Title:Recording Artist:Personal ID: Duration:BMI Work #:ISWC:ISRC:Rec SXID:Percent:Version:UPC:Original Recording Date:Genre:Date Registered:Recording Release Date:Registration Origin:Songwriter/Composer:SC Current Affiliation:SC IPI Name #:Shares:BMI #:Publisher:Pub Current Affiliation:Pub IPI Name #:MLC Publisher Number:Registant:ID #:Rights Owner:RO SXID:RO Mandate:RO Mandate Territories:RO AHRA Authorization:Performer:Per SXID:Per Mandate:Per Mandate Territories:Per AHRA Authorization:MLC Song Code:ISNI ID:Aliases:Common Roles
+
 1.) Work Title: 09 12 2019  (check matching, do music reports)
     Alternative Title: AUGUST 12 TWENTY NINETEEN
     Alternative Title: AUGUST TWELFTH TWO THOUSAND NINETEEN
@@ -11,7 +13,7 @@
     Version: 1
     UPC: 
     Original Recording Date: 09/12/2019
-    Genre: Hip Hop/Rap
+    Genre: Hip Hop/Rap 
     Date Registered: 06/06/2021
     Recording Release Date: 06/24/2021
     Registration Origin: Works Registration

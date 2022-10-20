@@ -6441,7 +6441,7 @@
           }
         }
       },
-      "UiPath.Mail.Activities/1.18.0": {
+      "UiPath.Mail.Activities/1.18.1": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
@@ -7187,7 +7187,7 @@
           }
         }
       },
-      "UiPath.UIAutomation.Activities/22.10.1": {
+      "UiPath.UIAutomation.Activities/22.10.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -13951,7 +13951,7 @@
           }
         }
       },
-      "UiPath.Mail.Activities/1.18.0": {
+      "UiPath.Mail.Activities/1.18.1": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
@@ -14697,7 +14697,7 @@
           }
         }
       },
-      "UiPath.UIAutomation.Activities/22.10.1": {
+      "UiPath.UIAutomation.Activities/22.10.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -26530,10 +26530,10 @@
         "uipath.java.activities.nuspec"
       ]
     },
-    "UiPath.Mail.Activities/1.18.0": {
-      "sha512": "hZKW8f7u1ZgvE3qIqflI8ydpHAa+ql5si8UW4o71ks9Dwh9YqWLufFMQimWq6iza0dIDfOwoJT6h7NcbW6uRiQ==",
+    "UiPath.Mail.Activities/1.18.1": {
+      "sha512": "7agO92DJcrppvCMYmO7EvVXgxKAbXbq6J+4vWF+OwVeWmSGby/yM5hvuEFXmA+4ayzhXvg8g9UcwupEh+QaLAQ==",
       "type": "package",
-      "path": "uipath.mail.activities/1.18.0",
+      "path": "uipath.mail.activities/1.18.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -26783,7 +26783,7 @@
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.dll",
         "tools/net461/MainSessionServer/UiPath.MainSessionServer.Shared.pdb",
         "tools/net461/MainSessionServer/netstandard.dll",
-        "uipath.mail.activities.1.18.0.nupkg.sha512",
+        "uipath.mail.activities.1.18.1.nupkg.sha512",
         "uipath.mail.activities.nuspec"
       ]
     },
@@ -27717,10 +27717,10 @@
         "uipath.twilio.integrationservice.activities.nuspec"
       ]
     },
-    "UiPath.UIAutomation.Activities/22.10.1": {
-      "sha512": "+oCKB+DkA+r9vggQ0r5mfw5sIN3yh3ts13w7YXLp/7RZzW2C846nOC9Qp2o3YaIhcIoLhMdbks8Iny3S+6wwNg==",
+    "UiPath.UIAutomation.Activities/22.10.2": {
+      "sha512": "tqw3bwZYAG+zTFqWPzHpJEkweFYJDWIPg8DYHb51yOwRzMsr7bui5IidiEXm0VwV2i22qApcHpOoAqC7xu0uCA==",
       "type": "package",
-      "path": "uipath.uiautomation.activities/22.10.1",
+      "path": "uipath.uiautomation.activities/22.10.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -28156,7 +28156,7 @@
         "lib/net6.0/zh-CN/UiPath.UIAutomationNext.Activities.Design.resources.dll",
         "lib/net6.0/zh-CN/UiPath.UIAutomationNext.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.UIAutomationNext.Activities.resources.dll",
-        "uipath.uiautomation.activities.22.10.1.nupkg.sha512",
+        "uipath.uiautomation.activities.22.10.2.nupkg.sha512",
         "uipath.uiautomation.activities.nuspec"
       ]
     },
@@ -28785,12 +28785,12 @@
       "UiPath.GSuite.Activities >= 1.17.0-preview <= 1.17.0-preview",
       "UiPath.GoogleCloud.Activities >= 2.1.3 <= 2.1.3",
       "UiPath.Java.Activities >= 1.3.1 <= 1.3.1",
-      "UiPath.Mail.Activities >= 1.18.0 <= 1.18.0",
+      "UiPath.Mail.Activities >= 1.18.1 <= 1.18.1",
       "UiPath.PDF.Activities >= 3.10.1 <= 3.10.1",
       "UiPath.Python.Activities >= 1.6.0 <= 1.6.0",
       "UiPath.System.Activities >= 22.10.1 <= 22.10.1",
       "UiPath.Twilio.IntegrationService.Activities >= 4.0.5 <= 4.0.5",
-      "UiPath.UIAutomation.Activities >= 22.10.1 <= 22.10.1",
+      "UiPath.UIAutomation.Activities >= 22.10.2 <= 22.10.2",
       "UiPath.Vision >= 3.6.0 <= 3.6.0",
       "UiPath.Word.Activities >= 1.13.0 <= 1.13.0"
     ]
@@ -28882,7 +28882,7 @@
           "UiPath.Mail.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.18.0, 1.18.0]"
+            "version": "[1.18.1, 1.18.1]"
           },
           "UiPath.PDF.Activities": {
             "include": "Runtime",
@@ -28907,7 +28907,7 @@
           "UiPath.UIAutomation.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[22.10.1, 22.10.1]"
+            "version": "[22.10.2, 22.10.2]"
           },
           "UiPath.Vision": {
             "include": "Runtime",
