@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OneCountry" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:g="clr-namespace:Google;assembly=Google.Apis.Core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Mail.Activities" xmlns:usagg="clr-namespace:UiPath.Shared.Api.Google.Gmail;assembly=UiPath.GSuite" xmlns:utia="clr-namespace:UiPath.Twilio.IntegrationService.Activities;assembly=UiPath.Twilio.IntegrationService.Activities" xmlns:utic="clr-namespace:UiPath.Twilio.IntegrationService.Client;assembly=UiPath.Twilio.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="OneCountry" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:g="clr-namespace:Google;assembly=Google.Apis.Core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Mail.Activities" xmlns:usagg="clr-namespace:UiPath.Shared.Api.Google.Gmail;assembly=UiPath.GSuite" xmlns:utia="clr-namespace:UiPath.Twilio.IntegrationService.Activities;assembly=UiPath.Twilio.IntegrationService.Activities" xmlns:utic="clr-namespace:UiPath.Twilio.IntegrationService.Client;assembly=UiPath.Twilio.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="OneCountryExcel" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1054,431</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>934,431</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OneCountry_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="55">
@@ -67,7 +67,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="59">
+    <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -127,13 +127,23 @@
       <AssemblyReference>UiPath.Twilio.IntegrationService.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Adobe.AdobeSign.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workday.Activities</AssemblyReference>
-    </scg:List>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="476,366" sap2010:WorkflowViewState.IdRef="Sequence_24">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="Excel\Tycadome\Music\Mp3\EntryRookieYear.mp3" Name="FileToAttach" />
+      <Variable x:TypeArguments="x:String" Name="FileToAttach">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Excel\Tycadome\Music\Mp3\Meditation.mp3</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Default="18502733609" Name="MyNumber" />
       <Variable x:TypeArguments="x:String" Default="12076905875" Name="TwilioNum" />
+      <Variable x:TypeArguments="x:String" Name="JustChangeThis">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Mishuba - Meditation</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -154,44 +164,44 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="rubydetha@gmail.com" DisplayName="Use Gmail" EmailAddress="rubydetha@gmail.com" sap:VirtualizedContainerService.HintSize="358,90" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+            <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="rubydetha@gmail.com" DisplayName="Use Gmail" EmailAddress="rubydetha@gmail.com" sap:VirtualizedContainerService.HintSize="510,580" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
               <umab:GmailApplicationCard.Body>
                 <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Ruby" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,375" sap2010:WorkflowViewState.IdRef="Sequence_133">
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,391" sap2010:WorkflowViewState.IdRef="Sequence_133">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <utia:Scope ConnectionId="289c96d1-5a40-ed11-a27c-0003ffe769fe" Connector="uipath-twilio-messaging" DesignConnectionEnabled="True" DisplayName="Twilio Scope" sap:VirtualizedContainerService.HintSize="334,283" sap2010:WorkflowViewState.IdRef="Scope_1" TelemetryEnabled="False" ThrowExceptionOnError="True" UseConnectionService="True">
+                    <utia:Scope ConnectionId="289c96d1-5a40-ed11-a27c-0003ffe769fe" Connector="uipath-twilio-messaging" DesignConnectionEnabled="True" DisplayName="Twilio Scope" sap:VirtualizedContainerService.HintSize="434,301" sap2010:WorkflowViewState.IdRef="Scope_1" TelemetryEnabled="False" ThrowExceptionOnError="True" UseConnectionService="True">
                       <utia:Scope.Body>
                         <ActivityAction x:TypeArguments="uibi:IScopeActivityContext">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="uibi:IScopeActivityContext" Name="ScopeActivityContext" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="295,172" sap2010:WorkflowViewState.IdRef="Sequence_132">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,180" sap2010:WorkflowViewState.IdRef="Sequence_132">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,332" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="[OneCountryExcel]">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,356" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="[OneCountryExcel]">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="International" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="AllSheets" sap:VirtualizedContainerService.HintSize="376,172" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <Sequence DisplayName="AllSheets" sap:VirtualizedContainerService.HintSize="400,180" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="434,221" sap2010:WorkflowViewState.IdRef="ForEachSheetX_1" Workbook="[International]">
+                                    <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="434,245" sap2010:WorkflowViewState.IdRef="ForEachSheetX_1" Workbook="[International]">
                                       <ueab:ForEachSheetX.Body>
                                         <ActivityAction x:TypeArguments="ue:WorksheetQuickHandle, x:Int32">
                                           <ActivityAction.Argument1>
@@ -200,7 +210,7 @@
                                           <ActivityAction.Argument2>
                                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                           </ActivityAction.Argument2>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,416" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,454" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="sd:DataTable" Name="Family" />
                                             </Sequence.Variables>
@@ -210,7 +220,7 @@
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Reading range for &quot; + OneCountryExcel]">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Reading range for &quot; + OneCountryExcel]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -218,7 +228,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:LogMessage>
-                                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[CurrentSheet]" SaveTo="[Family]">
+                                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[CurrentSheet]" SaveTo="[Family]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -226,7 +236,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ueab:ReadRangeX>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Looking for emails to send.&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Looking for emails to send.&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -234,18 +244,17 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:LogMessage>
-                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Family]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Family]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,205" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                               <ui:ForEachRow.Body>
                                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="691,1853" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="691,676" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="x:String" Name="CompanyName" />
                                                       <Variable x:TypeArguments="x:String" Name="CompanyEmail" />
                                                       <Variable x:TypeArguments="x:String" Name="CompanyWebsite" />
-                                                      <Variable x:TypeArguments="x:String" Default="Mishuba - Entry Rookie Year (New Music)" Name="JustChangeThis" />
                                                       <Variable x:TypeArguments="x:String" Default="[&quot;QuickHandleException found for &quot; + CompanyName + &quot; in &quot; + row(&quot;Country&quot;).ToString + &quot; their email is &quot; + CompanyEmail]" Name="QuickHandeException" />
                                                       <Variable x:TypeArguments="x:String" Default="[&quot;GoogleApiException found for &quot; + CompanyName + &quot; in &quot; + row(&quot;Country&quot;).ToString + &quot; their email is &quot; + CompanyEmail]" Name="GoogleApiException" />
                                                       <Variable x:TypeArguments="x:String" Default="[&quot;GmailException found for &quot; + CompanyName + &quot; in &quot; + row(&quot;Country&quot;).ToString + &quot; their email is &quot; + CompanyEmail]" Name="GmailException" />
@@ -257,21 +266,21 @@
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentSheet.Name]" sap:VirtualizedContainerService.HintSize="649,1669" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentSheet.Name]" sap:VirtualizedContainerService.HintSize="649,494" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence x:Key="Mp3" sap:VirtualizedContainerService.HintSize="573,1252" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                      <Sequence x:Key="Mp3" sap:VirtualizedContainerService.HintSize="573,1262" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="531,68" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="531,90" sap2010:WorkflowViewState.IdRef="Sequence_68">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -295,7 +304,7 @@
                                                             </Assign.Value>
                                                           </Assign>
                                                         </Sequence>
-                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="531,52" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Trace" Message="[&quot;Trying to send email to &quot; + row(&quot;Name&quot;).ToString + &quot; from &quot; + row(&quot;Country&quot;).ToString]">
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="531,61" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Trace" Message="[&quot;Trying to send email to &quot; + row(&quot;Name&quot;).ToString + &quot; from &quot; + row(&quot;Country&quot;).ToString]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -303,7 +312,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:LogMessage>
-                                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="531,960" sap2010:WorkflowViewState.IdRef="IfElseIf_9">
+                                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="531,967" sap2010:WorkflowViewState.IdRef="IfElseIf_9">
                                                           <ui:IfElseIf.ConditionBlocks>
                                                             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                               <ui:IfElseIfBlock BlockType="If" Condition="[CompanyEmail.Contains(&quot;@&quot;)]">
@@ -385,7 +394,7 @@
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                               <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_1" UseConnectionService="True">
                                                                                 <utia:SendMessage.BusinessEntity>
-                                                                                  <uibi:BusinessEntity Name="Messages">
+                                                                                  <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="Messages">
                                                                                     <uibi:BusinessEntity.AllFields>
                                                                                       <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                         <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -409,16 +418,17 @@
                                                                                       </scg:List>
                                                                                     </uibi:BusinessEntity.AllFields>
                                                                                     <uibi:BusinessEntity.EntityMetadata>
-                                                                                      <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" x:Name="__ReferenceID10" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
+                                                                                      <uibi:EntityMetadata x:Name="__ReferenceID10" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
+                                                                                        <uibi:EntityMetadata.Metadata>
+                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                                                                                            <x:String x:Key="Object">Messages</x:String>
+                                                                                            <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                            <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                            <x:String x:Key="Path">/Messages</x:String>
+                                                                                          </scg:Dictionary>
+                                                                                        </uibi:EntityMetadata.Metadata>
+                                                                                      </uibi:EntityMetadata>
                                                                                     </uibi:BusinessEntity.EntityMetadata>
-                                                                                    <uibi:BusinessEntity.Metadata>
-                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                                                                                        <x:String x:Key="Object">Messages</x:String>
-                                                                                        <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                        <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                        <x:String x:Key="Path">/Messages</x:String>
-                                                                                      </scg:Dictionary>
-                                                                                    </uibi:BusinessEntity.Metadata>
                                                                                     <uibi:BusinessEntity.SelectedFields>
                                                                                       <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                         <x:Reference>__ReferenceID1</x:Reference>
@@ -1211,7 +1221,7 @@
                                                                             </ActivityAction.Argument>
                                                                             <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_2" UseConnectionService="True">
                                                                               <utia:SendMessage.BusinessEntity>
-                                                                                <uibi:BusinessEntity Name="Messages">
+                                                                                <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID5}" Name="Messages">
                                                                                   <uibi:BusinessEntity.AllFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                       <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -1235,16 +1245,17 @@
                                                                                     </scg:List>
                                                                                   </uibi:BusinessEntity.AllFields>
                                                                                   <uibi:BusinessEntity.EntityMetadata>
-                                                                                    <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID5}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
+                                                                                    <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
+                                                                                      <uibi:EntityMetadata.Metadata>
+                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID5">
+                                                                                          <x:String x:Key="Object">Messages</x:String>
+                                                                                          <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                          <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                          <x:String x:Key="Path">/Messages</x:String>
+                                                                                        </scg:Dictionary>
+                                                                                      </uibi:EntityMetadata.Metadata>
+                                                                                    </uibi:EntityMetadata>
                                                                                   </uibi:BusinessEntity.EntityMetadata>
-                                                                                  <uibi:BusinessEntity.Metadata>
-                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID5">
-                                                                                      <x:String x:Key="Object">Messages</x:String>
-                                                                                      <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                      <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                      <x:String x:Key="Path">/Messages</x:String>
-                                                                                    </scg:Dictionary>
-                                                                                  </uibi:BusinessEntity.Metadata>
                                                                                   <uibi:BusinessEntity.SelectedFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                       <x:Reference>__ReferenceID6</x:Reference>
@@ -2296,14 +2307,14 @@
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:IfElseIf>
                                                       </Sequence>
-                                                      <Sequence x:Key="Wav" sap:VirtualizedContainerService.HintSize="765,2028" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                                      <Sequence x:Key="Wav" sap:VirtualizedContainerService.HintSize="765,2038" sap2010:WorkflowViewState.IdRef="Sequence_92">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="723,68" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="723,90" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2327,7 +2338,7 @@
                                                             </Assign.Value>
                                                           </Assign>
                                                         </Sequence>
-                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="723,52" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="Trace" Message="[&quot;Trying to send email to &quot; + row(&quot;Name&quot;).ToString + &quot; from &quot; + row(&quot;Country&quot;).ToString]">
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="723,61" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="Trace" Message="[&quot;Trying to send email to &quot; + row(&quot;Name&quot;).ToString + &quot; from &quot; + row(&quot;Country&quot;).ToString]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2335,7 +2346,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:LogMessage>
-                                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="723,1736" sap2010:WorkflowViewState.IdRef="IfElseIf_10">
+                                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="723,1743" sap2010:WorkflowViewState.IdRef="IfElseIf_10">
                                                           <ui:IfElseIf.ConditionBlocks>
                                                             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                               <ui:IfElseIfBlock BlockType="If" Condition="[CompanyEmail.Contains(&quot;@&quot;)]">
@@ -2790,7 +2801,7 @@
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:IfElseIf>
                                                       </Sequence>
-                                                      <Sequence x:Key="Attachment" sap:VirtualizedContainerService.HintSize="807,68" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                                      <Sequence x:Key="Attachment" sap:VirtualizedContainerService.HintSize="807,80" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3309,7 +3320,7 @@
                                                           </ui:IfElseIf>
                                                         </Sequence>
                                                       </Sequence>
-                                                      <Sequence x:Key="Both" sap:VirtualizedContainerService.HintSize="807,68" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                                      <Sequence x:Key="Both" sap:VirtualizedContainerService.HintSize="807,80" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3830,7 +3841,7 @@
                                                           </ui:IfElseIf>
                                                         </Sequence>
                                                       </Sequence>
-                                                      <Sequence x:Key="Youtube" sap:VirtualizedContainerService.HintSize="807,68" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                                      <Sequence x:Key="Youtube" sap:VirtualizedContainerService.HintSize="807,80" sap2010:WorkflowViewState.IdRef="Sequence_106">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4254,7 +4265,7 @@
                                                           </ui:IfElseIf>
                                                         </Sequence>
                                                       </Sequence>
-                                                      <Sequence x:Key="Website" sap:VirtualizedContainerService.HintSize="535,68" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                                      <Sequence x:Key="Website" sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_56">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4323,7 +4334,7 @@
                                                           </ui:IfElseIf>
                                                         </Sequence>
                                                       </Sequence>
-                                                      <Sequence x:Key="Form" sap:VirtualizedContainerService.HintSize="242,68" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                      <Sequence x:Key="Form" sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_57">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4392,7 +4403,7 @@
                                                           </ui:IfElseIf>
                                                         </Sequence>
                                                       </Sequence>
-                                                      <Sequence x:Key="DSP" sap:VirtualizedContainerService.HintSize="807,68" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                                      <Sequence x:Key="DSP" sap:VirtualizedContainerService.HintSize="807,80" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4888,14 +4899,14 @@
                                                           </ui:IfElseIf>
                                                         </Sequence>
                                                       </Sequence>
-                                                      <Sequence x:Key="Everything" sap:VirtualizedContainerService.HintSize="651,68" sap2010:WorkflowViewState.IdRef="Sequence_130">
+                                                      <Sequence x:Key="Everything" sap:VirtualizedContainerService.HintSize="607,697" sap2010:WorkflowViewState.IdRef="Sequence_130">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="609,68" sap2010:WorkflowViewState.IdRef="Sequence_124">
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="565,90" sap2010:WorkflowViewState.IdRef="Sequence_124">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4919,7 +4930,7 @@
                                                             </Assign.Value>
                                                           </Assign>
                                                         </Sequence>
-                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="609,52" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Trace" Message="[&quot;Trying to send email to &quot; + CompanyName + &quot; from &quot; + row(&quot;Country&quot;).ToString]">
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="565,61" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Trace" Message="[&quot;Trying to send email to &quot; + CompanyName + &quot; from &quot; + row(&quot;Country&quot;).ToString]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4927,12 +4938,12 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:LogMessage>
-                                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="609,348" sap2010:WorkflowViewState.IdRef="IfElseIf_12">
+                                                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="565,376" sap2010:WorkflowViewState.IdRef="IfElseIf_12">
                                                           <ui:IfElseIf.ConditionBlocks>
                                                             <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                               <ui:IfElseIfBlock BlockType="If" Condition="[CompanyEmail.Contains(&quot;@&quot;)]">
                                                                 <ui:IfElseIfBlock.Then>
-                                                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_32">
+                                                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="440,387" sap2010:WorkflowViewState.IdRef="TryCatch_32">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4947,7 +4958,7 @@
                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Account="[Ruby]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,399" sap2010:WorkflowViewState.IdRef="SendMailX_31" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="100" ReplyTo="hubertmaxwell34@gmail.com" Sensitivity="Normal" Subject="[JustChangeThis]" To="[CompanyEmail]" UseDocumentAsBody="False">
+                                                                        <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Account="[Ruby]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,409" sap2010:WorkflowViewState.IdRef="SendMailX_31" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="100" ReplyTo="hubertmaxwell34@gmail.com" Sensitivity="Normal" Subject="[JustChangeThis]" To="[CompanyEmail]" UseDocumentAsBody="False">
                                                                           <umab:SendMailX.Files>
                                                                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                                               <InArgument x:TypeArguments="x:String">[FileToAttach]</InArgument>
@@ -4964,11 +4975,11 @@
                                                                             </umabh:HtmlContentArgument>
                                                                           </umab:SendMailX.HtmlBodyFromFile>
                                                                         </umab:SendMailX>
-                                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="LogMessage_99" Level="Trace" Message="[&quot;Email sent to &quot; + CompanyName]" />
+                                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,101" sap2010:WorkflowViewState.IdRef="LogMessage_99" Level="Trace" Message="[&quot;Email sent to &quot; + CompanyName]" />
                                                                       </Sequence>
                                                                     </TryCatch.Try>
                                                                     <TryCatch.Catches>
-                                                                      <Catch x:TypeArguments="um:QuickHandleException" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_56">
+                                                                      <Catch x:TypeArguments="um:QuickHandleException" sap:VirtualizedContainerService.HintSize="406,21" sap2010:WorkflowViewState.IdRef="Catch`1_56">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4979,7 +4990,7 @@
                                                                           <ActivityAction.Argument>
                                                                             <DelegateInArgument x:TypeArguments="um:QuickHandleException" Name="exception" />
                                                                           </ActivityAction.Argument>
-                                                                          <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_26" UseConnectionService="True">
+                                                                          <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,314" sap2010:WorkflowViewState.IdRef="SendMessage_26" UseConnectionService="True">
                                                                             <utia:SendMessage.BusinessEntity>
                                                                               <uibi:BusinessEntity EntityMetadata="{x:Reference __ReferenceID10}" Metadata="{x:Reference __ReferenceID0}" Name="Messages">
                                                                                 <uibi:BusinessEntity.AllFields>
@@ -5041,7 +5052,7 @@
                                                                           </utia:SendMessage>
                                                                         </ActivityAction>
                                                                       </Catch>
-                                                                      <Catch x:TypeArguments="g:GoogleApiException" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_57">
+                                                                      <Catch x:TypeArguments="g:GoogleApiException" sap:VirtualizedContainerService.HintSize="406,21" sap2010:WorkflowViewState.IdRef="Catch`1_57">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5052,7 +5063,7 @@
                                                                           <ActivityAction.Argument>
                                                                             <DelegateInArgument x:TypeArguments="g:GoogleApiException" Name="exception" />
                                                                           </ActivityAction.Argument>
-                                                                          <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_27" UseConnectionService="True">
+                                                                          <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,314" sap2010:WorkflowViewState.IdRef="SendMessage_27" UseConnectionService="True">
                                                                             <utia:SendMessage.BusinessEntity>
                                                                               <uibi:BusinessEntity EntityMetadata="{x:Reference __ReferenceID10}" Metadata="{x:Reference __ReferenceID0}" Name="Messages">
                                                                                 <uibi:BusinessEntity.AllFields>
@@ -5114,7 +5125,7 @@
                                                                           </utia:SendMessage>
                                                                         </ActivityAction>
                                                                       </Catch>
-                                                                      <Catch x:TypeArguments="usa:TrackingException" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_58">
+                                                                      <Catch x:TypeArguments="usa:TrackingException" sap:VirtualizedContainerService.HintSize="406,21" sap2010:WorkflowViewState.IdRef="Catch`1_58">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -5125,9 +5136,9 @@
                                                                           <ActivityAction.Argument>
                                                                             <DelegateInArgument x:TypeArguments="usa:TrackingException" Name="exception" />
                                                                           </ActivityAction.Argument>
-                                                                          <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_30" UseConnectionService="True">
+                                                                          <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,314" sap2010:WorkflowViewState.IdRef="SendMessage_30" UseConnectionService="True">
                                                                             <utia:SendMessage.BusinessEntity>
-                                                                              <uibi:BusinessEntity Name="Messages">
+                                                                              <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID104}" Name="Messages">
                                                                                 <uibi:BusinessEntity.AllFields>
                                                                                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                     <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -5151,16 +5162,17 @@
                                                                                   </scg:List>
                                                                                 </uibi:BusinessEntity.AllFields>
                                                                                 <uibi:BusinessEntity.EntityMetadata>
-                                                                                  <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID104}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
+                                                                                  <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
+                                                                                    <uibi:EntityMetadata.Metadata>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID104">
+                                                                                        <x:String x:Key="Object">Messages</x:String>
+                                                                                        <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                        <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                        <x:String x:Key="Path">/Messages</x:String>
+                                                                                      </scg:Dictionary>
+                                                                                    </uibi:EntityMetadata.Metadata>
+                                                                                  </uibi:EntityMetadata>
                                                                                 </uibi:BusinessEntity.EntityMetadata>
-                                                                                <uibi:BusinessEntity.Metadata>
-                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID104">
-                                                                                    <x:String x:Key="Object">Messages</x:String>
-                                                                                    <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                    <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                    <x:String x:Key="Path">/Messages</x:String>
-                                                                                  </scg:Dictionary>
-                                                                                </uibi:BusinessEntity.Metadata>
                                                                                 <uibi:BusinessEntity.SelectedFields>
                                                                                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                     <x:Reference>__ReferenceID105</x:Reference>
@@ -5939,7 +5951,7 @@
                                                                           </utia:SendMessage>
                                                                         </ActivityAction>
                                                                       </Catch>
-                                                                      <Catch x:TypeArguments="usagg:GmailException" sap:VirtualizedContainerService.HintSize="400,138" sap2010:WorkflowViewState.IdRef="Catch`1_60">
+                                                                      <Catch x:TypeArguments="usagg:GmailException" sap:VirtualizedContainerService.HintSize="406,149" sap2010:WorkflowViewState.IdRef="Catch`1_60">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5950,7 +5962,7 @@
                                                                           <ActivityAction.Argument>
                                                                             <DelegateInArgument x:TypeArguments="usagg:GmailException" Name="exception" />
                                                                           </ActivityAction.Argument>
-                                                                          <Sequence sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                                                                          <Sequence sap:VirtualizedContainerService.HintSize="538,1246" sap2010:WorkflowViewState.IdRef="Sequence_128">
                                                                             <Sequence.Variables>
                                                                               <Variable x:TypeArguments="x:String" Default="AC96d7b0d3fa766cd145e9e71625a06b05" Name="TextingBruh" />
                                                                               <Variable x:TypeArguments="x:String" Default="SK5e237c2d4a590103dbb9623655ca1e3b" Name="TextingApi" />
@@ -5962,9 +5974,9 @@
                                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="476,308" sap2010:WorkflowViewState.IdRef="SendMessage_31" UseConnectionService="True">
+                                                                            <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="496,314" sap2010:WorkflowViewState.IdRef="SendMessage_31" UseConnectionService="True">
                                                                               <utia:SendMessage.BusinessEntity>
-                                                                                <uibi:BusinessEntity Name="Messages">
+                                                                                <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID109}" Name="Messages">
                                                                                   <uibi:BusinessEntity.AllFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                       <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -5988,16 +6000,17 @@
                                                                                     </scg:List>
                                                                                   </uibi:BusinessEntity.AllFields>
                                                                                   <uibi:BusinessEntity.EntityMetadata>
-                                                                                    <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID109}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
+                                                                                    <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
+                                                                                      <uibi:EntityMetadata.Metadata>
+                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID109">
+                                                                                          <x:String x:Key="Object">Messages</x:String>
+                                                                                          <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                          <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                          <x:String x:Key="Path">/Messages</x:String>
+                                                                                        </scg:Dictionary>
+                                                                                      </uibi:EntityMetadata.Metadata>
+                                                                                    </uibi:EntityMetadata>
                                                                                   </uibi:BusinessEntity.EntityMetadata>
-                                                                                  <uibi:BusinessEntity.Metadata>
-                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID109">
-                                                                                      <x:String x:Key="Object">Messages</x:String>
-                                                                                      <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                      <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                      <x:String x:Key="Path">/Messages</x:String>
-                                                                                    </scg:Dictionary>
-                                                                                  </uibi:BusinessEntity.Metadata>
                                                                                   <uibi:BusinessEntity.SelectedFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                       <x:Reference>__ReferenceID110</x:Reference>
@@ -6774,7 +6787,7 @@
                                                                                 <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                                                                               </utia:SendMessage.TelemetryProperties>
                                                                             </utia:SendMessage>
-                                                                            <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="476,81" sap2010:WorkflowViewState.IdRef="ForEachEmailX_11" IncludeSubfolders="False" Mails="[Ruby.Folder(&quot;Sent&quot;)]" NumberOfEmailsLimit="1000" RetrieveAttachments="False" UnreadOnly="False" WithAttachmentsOnly="False">
+                                                                            <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="496,90" sap2010:WorkflowViewState.IdRef="ForEachEmailX_11" IncludeSubfolders="False" Mails="[Ruby.Folder(&quot;Sent&quot;)]" NumberOfEmailsLimit="1000" RetrieveAttachments="False" UnreadOnly="False" WithAttachmentsOnly="False">
                                                                               <umab:ForEachEmailX.Body>
                                                                                 <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
                                                                                   <ActivityAction.Argument1>
@@ -6783,7 +6796,7 @@
                                                                                   <ActivityAction.Argument2>
                                                                                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                                                   </ActivityAction.Argument2>
-                                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_126">
+                                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_126">
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -6827,14 +6840,14 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </umab:ForEachEmailX>
-                                                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,618" sap2010:WorkflowViewState.IdRef="Sequence_127">
+                                                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,672" sap2010:WorkflowViewState.IdRef="Sequence_127">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Account="[Ruby]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,399" sap2010:WorkflowViewState.IdRef="SendMailX_32" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="100" ReplyTo="hubertmaxwell34@gmail.com" Sensitivity="Normal" Subject="[JustChangeThis]" To="[CompanyEmail]" UseDocumentAsBody="False">
+                                                                              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Account="[Ruby]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,409" sap2010:WorkflowViewState.IdRef="SendMailX_32" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="100" ReplyTo="hubertmaxwell34@gmail.com" Sensitivity="Normal" Subject="[JustChangeThis]" To="[CompanyEmail]" UseDocumentAsBody="False">
                                                                                 <umab:SendMailX.Files>
                                                                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                                                     <InArgument x:TypeArguments="x:String">[FileToAttach]</InArgument>
@@ -6851,7 +6864,7 @@
                                                                                   </umabh:HtmlContentArgument>
                                                                                 </umab:SendMailX.HtmlBodyFromFile>
                                                                               </umab:SendMailX>
-                                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="LogMessage_103" Level="Trace" Message="[&quot;Email sent to &quot; + CompanyName]" />
+                                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,101" sap2010:WorkflowViewState.IdRef="LogMessage_103" Level="Trace" Message="[&quot;Email sent to &quot; + CompanyName]" />
                                                                             </Sequence>
                                                                           </Sequence>
                                                                         </ActivityAction>
@@ -6865,7 +6878,7 @@
                                                               </ui:IfElseIfBlock>
                                                               <ui:IfElseIfBlock BlockType="Else">
                                                                 <ui:IfElseIfBlock.Then>
-                                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_129">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
