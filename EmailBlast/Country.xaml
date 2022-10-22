@@ -132,18 +132,10 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="476,366" sap2010:WorkflowViewState.IdRef="Sequence_24">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="FileToAttach">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Excel\Tycadome\Music\Mp3\Meditation.mp3</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Excel\Tycadome\Music\Mp3\Meditation.mp3" Name="FileToAttach" />
       <Variable x:TypeArguments="x:String" Default="18502733609" Name="MyNumber" />
       <Variable x:TypeArguments="x:String" Default="12076905875" Name="TwilioNum" />
-      <Variable x:TypeArguments="x:String" Name="JustChangeThis">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Mishuba - Meditation</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Mishuba - Meditation" Name="JustChangeThis" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -194,7 +186,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="International" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="AllSheets" sap:VirtualizedContainerService.HintSize="400,180" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <Sequence DisplayName="AllSheets" sap:VirtualizedContainerService.HintSize="400,80" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -394,7 +386,7 @@
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                               <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_1" UseConnectionService="True">
                                                                                 <utia:SendMessage.BusinessEntity>
-                                                                                  <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="Messages">
+                                                                                  <uibi:BusinessEntity Name="Messages">
                                                                                     <uibi:BusinessEntity.AllFields>
                                                                                       <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                         <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -418,17 +410,16 @@
                                                                                       </scg:List>
                                                                                     </uibi:BusinessEntity.AllFields>
                                                                                     <uibi:BusinessEntity.EntityMetadata>
-                                                                                      <uibi:EntityMetadata x:Name="__ReferenceID10" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
-                                                                                        <uibi:EntityMetadata.Metadata>
-                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-                                                                                            <x:String x:Key="Object">Messages</x:String>
-                                                                                            <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                            <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                            <x:String x:Key="Path">/Messages</x:String>
-                                                                                          </scg:Dictionary>
-                                                                                        </uibi:EntityMetadata.Metadata>
-                                                                                      </uibi:EntityMetadata>
+                                                                                      <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" x:Name="__ReferenceID10" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
                                                                                     </uibi:BusinessEntity.EntityMetadata>
+                                                                                    <uibi:BusinessEntity.Metadata>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                                                                                        <x:String x:Key="Object">Messages</x:String>
+                                                                                        <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                        <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                        <x:String x:Key="Path">/Messages</x:String>
+                                                                                      </scg:Dictionary>
+                                                                                    </uibi:BusinessEntity.Metadata>
                                                                                     <uibi:BusinessEntity.SelectedFields>
                                                                                       <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                         <x:Reference>__ReferenceID1</x:Reference>
@@ -1221,7 +1212,7 @@
                                                                             </ActivityAction.Argument>
                                                                             <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,308" sap2010:WorkflowViewState.IdRef="SendMessage_2" UseConnectionService="True">
                                                                               <utia:SendMessage.BusinessEntity>
-                                                                                <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID5}" Name="Messages">
+                                                                                <uibi:BusinessEntity Name="Messages">
                                                                                   <uibi:BusinessEntity.AllFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                       <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -1245,17 +1236,16 @@
                                                                                     </scg:List>
                                                                                   </uibi:BusinessEntity.AllFields>
                                                                                   <uibi:BusinessEntity.EntityMetadata>
-                                                                                    <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
-                                                                                      <uibi:EntityMetadata.Metadata>
-                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID5">
-                                                                                          <x:String x:Key="Object">Messages</x:String>
-                                                                                          <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                          <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                          <x:String x:Key="Path">/Messages</x:String>
-                                                                                        </scg:Dictionary>
-                                                                                      </uibi:EntityMetadata.Metadata>
-                                                                                    </uibi:EntityMetadata>
+                                                                                    <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID5}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
                                                                                   </uibi:BusinessEntity.EntityMetadata>
+                                                                                  <uibi:BusinessEntity.Metadata>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID5">
+                                                                                      <x:String x:Key="Object">Messages</x:String>
+                                                                                      <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                      <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                      <x:String x:Key="Path">/Messages</x:String>
+                                                                                    </scg:Dictionary>
+                                                                                  </uibi:BusinessEntity.Metadata>
                                                                                   <uibi:BusinessEntity.SelectedFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                       <x:Reference>__ReferenceID6</x:Reference>
@@ -5138,7 +5128,7 @@
                                                                           </ActivityAction.Argument>
                                                                           <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="334,314" sap2010:WorkflowViewState.IdRef="SendMessage_30" UseConnectionService="True">
                                                                             <utia:SendMessage.BusinessEntity>
-                                                                              <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID104}" Name="Messages">
+                                                                              <uibi:BusinessEntity Name="Messages">
                                                                                 <uibi:BusinessEntity.AllFields>
                                                                                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                     <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -5162,17 +5152,16 @@
                                                                                   </scg:List>
                                                                                 </uibi:BusinessEntity.AllFields>
                                                                                 <uibi:BusinessEntity.EntityMetadata>
-                                                                                  <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
-                                                                                    <uibi:EntityMetadata.Metadata>
-                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID104">
-                                                                                        <x:String x:Key="Object">Messages</x:String>
-                                                                                        <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                        <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                        <x:String x:Key="Path">/Messages</x:String>
-                                                                                      </scg:Dictionary>
-                                                                                    </uibi:EntityMetadata.Metadata>
-                                                                                  </uibi:EntityMetadata>
+                                                                                  <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID104}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
                                                                                 </uibi:BusinessEntity.EntityMetadata>
+                                                                                <uibi:BusinessEntity.Metadata>
+                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID104">
+                                                                                    <x:String x:Key="Object">Messages</x:String>
+                                                                                    <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                    <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                    <x:String x:Key="Path">/Messages</x:String>
+                                                                                  </scg:Dictionary>
+                                                                                </uibi:BusinessEntity.Metadata>
                                                                                 <uibi:BusinessEntity.SelectedFields>
                                                                                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                     <x:Reference>__ReferenceID105</x:Reference>
@@ -5976,7 +5965,7 @@
                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                             <utia:SendMessage ConfiguredBusinessEntity="Messages" Connector="uipath-twilio-messaging" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send message" sap:VirtualizedContainerService.HintSize="496,314" sap2010:WorkflowViewState.IdRef="SendMessage_31" UseConnectionService="True">
                                                                               <utia:SendMessage.BusinessEntity>
-                                                                                <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID109}" Name="Messages">
+                                                                                <uibi:BusinessEntity Name="Messages">
                                                                                   <uibi:BusinessEntity.AllFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
                                                                                       <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Sid" DisplayName="SID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="True" IsMandatory="False" IsSelected="False" Location="Undefined" Name="Response.Sid" ShouldFilterOnChange="False" />
@@ -6000,17 +5989,16 @@
                                                                                     </scg:List>
                                                                                   </uibi:BusinessEntity.AllFields>
                                                                                   <uibi:BusinessEntity.EntityMetadata>
-                                                                                    <uibi:EntityMetadata DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages">
-                                                                                      <uibi:EntityMetadata.Metadata>
-                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID109">
-                                                                                          <x:String x:Key="Object">Messages</x:String>
-                                                                                          <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
-                                                                                          <x:String x:Key="Operation">CreateMessage</x:String>
-                                                                                          <x:String x:Key="Path">/Messages</x:String>
-                                                                                        </scg:Dictionary>
-                                                                                      </uibi:EntityMetadata.Metadata>
-                                                                                    </uibi:EntityMetadata>
+                                                                                    <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID109}" DisplayName="Messages" EligibleOperations="1" IsCustomEntity="False" Name="Messages" />
                                                                                   </uibi:BusinessEntity.EntityMetadata>
+                                                                                  <uibi:BusinessEntity.Metadata>
+                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID109">
+                                                                                      <x:String x:Key="Object">Messages</x:String>
+                                                                                      <x:String x:Key="Client">UiPath.Twilio.IntegrationService.Client.MessagesAPIClient</x:String>
+                                                                                      <x:String x:Key="Operation">CreateMessage</x:String>
+                                                                                      <x:String x:Key="Path">/Messages</x:String>
+                                                                                    </scg:Dictionary>
+                                                                                  </uibi:BusinessEntity.Metadata>
                                                                                   <uibi:BusinessEntity.SelectedFields>
                                                                                     <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                                                                                       <x:Reference>__ReferenceID110</x:Reference>
