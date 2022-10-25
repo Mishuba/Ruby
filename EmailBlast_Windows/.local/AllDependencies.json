@@ -28796,15 +28796,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mishu\\.nuget\\packages\\": {}
+    "C:\\Users\\18502\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "EmailBlast_Windows",
       "projectName": "EmailBlast_Windows",
-      "projectPath": "C:\\Repository\\Ruby\\EmailBlast_Windows\\.local",
-      "packagesPath": "C:\\Users\\mishu\\.nuget\\packages\\",
-      "outputPath": "C:\\Repository\\Ruby\\EmailBlast_Windows\\.local"
+      "projectPath": "C:\\Repository\\Tech\\Software Programming and Coding\\Robots\\Ruby\\EmailBlast_Windows\\.local",
+      "packagesPath": "C:\\Users\\18502\\.nuget\\packages\\",
+      "outputPath": "C:\\Repository\\Tech\\Software Programming and Coding\\Robots\\Ruby\\EmailBlast_Windows\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -28920,7 +28920,7 @@
             "version": "[1.13.0, 1.13.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\mishu\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\18502\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
