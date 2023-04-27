@@ -1,0 +1,68 @@
+{
+  "name": "EmailBlastIGuess",
+  "description": "Blank Library",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "Google.Apis.Sheets.v4": "[1.60.0.2979]",
+    "System.Activities.ViewModels": "[1.0.0-20230306.1]",
+    "UiPath.Activities.RuntimeGovernance": "[1.1.6]",
+    "UiPath.Callout.Activities": "[23.4.3]",
+    "UiPath.CodedWorkflows": "[23.2.0-alpha.3503132]",
+    "UiPath.ComplexScenarios.Activities": "[1.4.0]",
+    "UiPath.Database.Activities": "[1.7.1]",
+    "UiPath.Excel.Activities": "[2.20.1]",
+    "UiPath.Form.Activities": "[23.4.3]",
+    "UiPath.Mail.Activities": "[1.19.0]",
+    "UiPath.OCR.Activities": "[3.15.1]",
+    "UiPath.OCR.Contracts": "[2.14.0]",
+    "UiPath.OpenAI.IntegrationService.Activities": "[5.0.1-preview]",
+    "UiPath.Presentations.Activities": "[1.11.0]",
+    "UiPath.System.Activities": "[23.4.2]",
+    "UiPath.Testing.Activities": "[23.4.0]",
+    "UiPath.UIAutomation.Activities": "[23.4.5-beta.3758343]",
+    "UiPath.Vision": "[3.10.1]",
+    "UiPath.WebAPI.Activities": "[1.16.2]",
+    "UiPath.Word.Activities": "[1.16.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

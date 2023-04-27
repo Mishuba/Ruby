@@ -23464,7 +23464,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\18502\\.nuget\\packages\\": {}
+    "C:\\Users\\18502\\.nuget\\packages\\": {},
+    "C:\\Users\\18502\\AppData\\Local\\UiPath\\NugetFallbackFolder": {}
   },
   "project": {
     "restore": {
@@ -23472,7 +23473,10 @@
       "projectName": "EmailBlast",
       "projectPath": "C:\\Repository\\Tech\\Software Programming and Coding\\Robots\\Ruby\\EmailBlast\\.local",
       "packagesPath": "C:\\Users\\18502\\.nuget\\packages\\",
-      "outputPath": "C:\\Repository\\Tech\\Software Programming and Coding\\Robots\\Ruby\\EmailBlast\\.local"
+      "outputPath": "C:\\Repository\\Tech\\Software Programming and Coding\\Robots\\Ruby\\EmailBlast\\.local",
+      "fallbackFolders": [
+        "C:\\Users\\18502\\AppData\\Local\\UiPath\\NugetFallbackFolder"
+      ]
     },
     "frameworks": {
       "net461": {
