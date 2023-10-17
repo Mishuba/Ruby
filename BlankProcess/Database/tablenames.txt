@@ -1,0 +1,32 @@
+database 
+Entertainment Industry
+
+table names
+hhet
+hhdsp
+hhboth
+hhlink
+rocket
+rockdsp
+rockboth
+rocklink
+rnbet
+rnbdsp
+rnbboth
+rnblink
+ppl
+managers
+agents
+corporations
+venues
+festivals
+
+
+
+Table values
+Id
+Name
+Email
+Website
+Continent
+Country

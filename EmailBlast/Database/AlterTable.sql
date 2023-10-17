@@ -1,0 +1,1 @@
+ALTER TABLE Everything Rename COLUMN Addresses to Address;
