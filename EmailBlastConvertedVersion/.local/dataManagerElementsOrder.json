@@ -1,0 +1,89 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Start&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Where To Send.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SendingTooYou&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Worldwide.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Worldwide"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WhichContinent.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "WhichContinent&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "FrThisContinent"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Continent.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "ContinentFolder",
+        "FrThisCountry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Country.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FileToAttach&Sequence_24",
+        "MyNumber&Sequence_24",
+        "TwilioNum&Sequence_24",
+        "JustChangeThis&Sequence_24",
+        "Family&Sequence_21",
+        "CompanyName&Sequence_20",
+        "CompanyEmail&Sequence_20",
+        "CompanyWebsite&Sequence_20",
+        "QuickHandeException&Sequence_20",
+        "GoogleApiException&Sequence_20",
+        "GmailException&Sequence_20",
+        "TrackingException&Sequence_20",
+        "variable1&Sequence_134"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "OneCountryExcel"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

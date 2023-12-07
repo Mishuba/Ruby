@@ -1,5 +1,6 @@
 {
   "name": "EmailBlastConvertedVersion",
+  "projectId": "11ce5b66-d60a-4a45-85df-57cb803724f2",
   "description": "This will be my first real automation\r\n",
   "main": "Main.xaml",
   "dependencies": {
@@ -21,6 +22,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
