@@ -1,0 +1,67 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CreatedSpreadSheet&Sequence_1",
+        "MMO&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "From Database to Excel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CVTFDT&Sequence_3",
+        "TfDbConn&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Create.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FirstChoice&Sequence_1",
+        "WhichEmail&Sequence_1",
+        "TfFileName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workbook.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TfWb&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "New Spreadsheet Entry.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "WhoToSend&Sequence_1",
+        "NewEntries&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

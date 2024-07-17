@@ -1,0 +1,28 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Calendar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CreatedEvent&Sequence_1",
+        "NewWhatToDo&Sequence_1",
+        "WhatToDo&Sequence_1",
+        "ChangeEvent&Sequence_1",
+        "NewTitle&Sequence_1",
+        "TheEventList&Sequence_1",
+        "NewEvent&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
