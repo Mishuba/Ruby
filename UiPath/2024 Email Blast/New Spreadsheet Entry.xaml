@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="New_Spreadsheet_Entry" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="406,1116" sap2010:WorkflowViewState.IdRef="New_Spreadsheet_Entry_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugase="clr-namespace:UiPath.GSuite.Activities.Sheets.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="New_Spreadsheet_Entry" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1239,1538" sap2010:WorkflowViewState.IdRef="New_Spreadsheet_Entry_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugase="clr-namespace:UiPath.GSuite.Activities.Sheets.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +38,7 @@
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -95,37 +96,188 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="New_Spreadsheet_Entry" sap:VirtualizedContainerService.HintSize="416,1051" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="New_Spreadsheet_Entry" sap:VirtualizedContainerService.HintSize="539,1473" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="NewEntries" />
+      <Variable x:TypeArguments="x:String" Name="WhoToSend" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[NewEntries]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="374,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;text&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;1&lt;/Column2&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:InputDialog Label="{x:Null}" Options="{x:Null}" OptionsString="{x:Null}" Result="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="374,279" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" />
-    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="{x:Null}" DataTable="[NewEntries]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="374,226" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-    <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="RobotStuff" BrowserItemId="1b_QcPdVlUlzOTpuDBPC2pQKTrHMrOr94JqmzloAfBxM" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="374,381" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_1" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
-      <uga:WriteRangeConnections.FileIdBackup>
-        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
-          <usau:BackupSlot.BackupValues>
-            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-          </usau:BackupSlot.BackupValues>
-        </usau:BackupSlot>
-      </uga:WriteRangeConnections.FileIdBackup>
-      <uga:WriteRangeConnections.RangeWriteModeBackup>
-        <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
-          <usau:BackupSlot.BackupValues>
-            <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
-              <x:String></x:String>
-            </scg:List>
-          </usau:BackupSlot.BackupValues>
-        </usau:BackupSlot>
-      </uga:WriteRangeConnections.RangeWriteModeBackup>
-    </uga:WriteRangeConnections>
+    <ui:BuildDataTable DataTable="[NewEntries]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="497,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Column1&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Column2&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Column1&gt;text&lt;/Column1&gt;&#xA;    &lt;Column2&gt;1&lt;/Column2&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:InputDialog Label="{x:Null}" Options="{x:Null}" OptionsString="{x:Null}" Result="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,275" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" />
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,329" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which spreadsheet are you inputting this information into? &lt;br&gt; in the future separate by country." OptionsString="Website;Wav;Mp3;Attachment;Link;Email;TsunamiGang" Title="SpreadSheet">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[WhoToSend]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WhoToSend]" sap:VirtualizedContainerService.HintSize="497,712" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="Website" AuthScopesInvalid="False" BrowserItemFriendlyName="Website" BrowserItemId="1FF6pEl0s0g9WqnvozTtZZCzoTbiSvsP_3vhMTT6CmYY" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_8" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1FF6pEl0s0g9WqnvozTtZZCzoTbiSvsP_3vhMTT6CmYY" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Website" FullPathHint="My Drive/Website" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+      </uga:WriteRangeConnections>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="Wav" AuthScopesInvalid="False" BrowserItemFriendlyName="Wav" BrowserItemId="1xJ8ogzhfLxd_JV1KichSbCBZY9qJkCh5cilwV9AnTIk" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_7" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1xJ8ogzhfLxd_JV1KichSbCBZY9qJkCh5cilwV9AnTIk" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Wav" FullPathHint="My Drive/Wav" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+      </uga:WriteRangeConnections>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="Mp3" AuthScopesInvalid="False" BrowserItemFriendlyName="Mp3" BrowserItemId="1QYXPLYLAopD17RUX0IAS3CVPBn1SmDQLrIDHKlobNmk" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_6" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1QYXPLYLAopD17RUX0IAS3CVPBn1SmDQLrIDHKlobNmk" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Mp3" FullPathHint="My Drive/Mp3" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+      </uga:WriteRangeConnections>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="Attachment" AuthScopesInvalid="False" BrowserItemFriendlyName="Attachment" BrowserItemId="1m-c1llV1PhLmNDnNy-a0qF0MAQS2KPFbtsUTvfCDYyM" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_5" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1m-c1llV1PhLmNDnNy-a0qF0MAQS2KPFbtsUTvfCDYyM" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Attachment" FullPathHint="My Drive/Attachment" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+      </uga:WriteRangeConnections>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="Link" AuthScopesInvalid="False" BrowserItemFriendlyName="Link" BrowserItemId="1KqXQd4tKaibP0h47LGLaAdObbD0TcEqIYJBdLWSSSbY" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_4" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1KqXQd4tKaibP0h47LGLaAdObbD0TcEqIYJBdLWSSSbY" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Link" FullPathHint="My Drive/Link" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+      </uga:WriteRangeConnections>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="Email" AuthScopesInvalid="False" BrowserItemFriendlyName="Email" BrowserItemId="17fIfmKU7645NEyUaEYqzSecmXO1zzSMjnO9qWNJwIik" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_3" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID5" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID5}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="17fIfmKU7645NEyUaEYqzSecmXO1zzSMjnO9qWNJwIik" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Email" FullPathHint="My Drive/Email" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+      </uga:WriteRangeConnections>
+      <uga:WriteRangeConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" x:Key="TsunamiGang" AuthScopesInvalid="False" BrowserItemFriendlyName="TsunamiGang" BrowserItemId="17NT7okFoIx4sPlzEZlomT5AvV-KgWFYJJASYgytkFFU" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,362" sap2010:WorkflowViewState.IdRef="WriteRangeConnections_2" IncludeHeaders="True" ItemSelectionMode="Browse" Range="Sheet1" RowPosition="0" Source="[NewEntries]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False" WriteMode="Append">
+        <uga:WriteRangeConnections.FileIdBackup>
+          <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="Browse">
+            <usau:BackupSlot.BackupValues>
+              <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.FileIdBackup>
+        <uga:WriteRangeConnections.Item>
+          <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID6}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="17NT7okFoIx4sPlzEZlomT5AvV-KgWFYJJASYgytkFFU" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="TsunamiGang" FullPathHint="My Drive/TsunamiGang" InputMode="Browse" />
+        </uga:WriteRangeConnections.Item>
+        <uga:WriteRangeConnections.RangeWriteModeBackup>
+          <usau:BackupSlot x:TypeArguments="ugase:RangeWriteMode" StoredValue="Append">
+            <usau:BackupSlot.BackupValues>
+              <scg:List x:TypeArguments="x:Object" x:Key="Overwrite" Capacity="1">
+                <x:String></x:String>
+              </scg:List>
+            </usau:BackupSlot.BackupValues>
+          </usau:BackupSlot>
+        </uga:WriteRangeConnections.RangeWriteModeBackup>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uga:WriteRangeConnections>
+    </Switch>
   </Sequence>
 </Activity>

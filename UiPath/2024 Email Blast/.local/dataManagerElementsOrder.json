@@ -51,6 +51,17 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "New Spreadsheet Entry.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "WhoToSend&Sequence_1",
+        "NewEntries&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
