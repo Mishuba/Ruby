@@ -1,0 +1,81 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login To Bmi.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ListOfMusicalWorks&Sequence_1",
+        "PublisherIPI&Sequence_20",
+        "MusicalWorkTitle&Sequence_1",
+        "PublisherShare&Sequence_19",
+        "PublisherName&Sequence_19",
+        "WriterIPI&Sequence_19",
+        "WriterBMIshare&Sequence_19",
+        "WriterAffliation&Sequence_19",
+        "SongwriterNcomposer&Sequence_19",
+        "BMIregistrationOrigin&Sequence_19",
+        "BMIregisterDate&Sequence_19",
+        "ISWC&Sequence_19",
+        "BMIworkNumber&Sequence_19",
+        "WorkTitle&Sequence_19"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login To UnitedMasters.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login To Soundexchange.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SoundexchangeID&Sequence_18",
+        "SXtest&Sequence_1",
+        "SEWT&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "SoundExchangeSongTitle"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login To The MLC.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login To Music Reports.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Login To Harry Fox Agency.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_To_Music_Reports" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2769" sap2010:WorkflowViewState.IdRef="Login_To_Music_Reports_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_To_Music_Reports" sap:VirtualizedContainerService.HintSize="654,2704" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: New InPrivate tab" sap:VirtualizedContainerService.HintSize="592,2593" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" ScopeGuid="c41ae4cf-168c-4f7c-a8e3-f53db166127b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,2376" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="758b2a84-bb46-4a7d-b510-757410e89ba5" sap:VirtualizedContainerService.HintSize="496,566" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (99,34,940,33)&quot; +&#xA;&quot;Anchor: Text 'InPrivate' (1239,44,48,12)&quot;]" DesignTimeCacheId="758b2a84-bb46-4a7d-b510-757410e89ba5" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="d511f547e07e149b953fe9bea4c781f6" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;www.musicreports.com[k(enter)]&quot;]" Version="V6">
+                      <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor Id="34f14e58-6242-427b-ba5c-05dbc292dc00">
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1239, 44, 48, 12" ElementType="Text" Text="InPrivate" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="99, 34, 940, 33" ElementType="InputBox" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                      <p:CvTypeIntoWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="dc8d21b7-c0b5-4571-b9df-036fc911144c">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvTypeIntoWithDescriptor.Target>
+                    </p:CvTypeIntoWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+              </p:CVScope.DesignTimeCache>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="5">
+                      <uc:CVCache DataSent="False" DisplayName="1" Id="758b2a84-bb46-4a7d-b510-757410e89ba5" InformativeScreenshot="08433434ff0242d06494bedf112b180c" LogicalPosition="0, 0" OcrText="New InPrivate tab X + _ X InPrivate ... Real Estate Programming Teaching Jobs &quot;UiPath Browser Automation 23.4&quot; started debugging this browser Cancel X InPrivate browsing InPrivate search with Microsoft Bing What InPrivate browsing does X What InPrivate browsing doesn't do Deletes your browsing info when you close all InPrivate windows Hide your browsing from your school, employer, or internet service provider Saves collections, favorites, and downloads (but not download history) Give you additional protection from tracking by default Prevents Microsoft Bing searches from being associated with you Add additional protection to what's available in normal browsing Always use &quot;Strict&quot; tracking prevention when browsing InPrivate If this is off, we'll use the same tracking prevention setting as a normal browsing window" Position="0, 0" ScreenshotGuid="ad0eeb45-2ce6-4713-b266-5e19470d777a" ServerVersion="1">
+                        <uc:CVCache.CvAnchorRelations>
+                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                            <uc:AnchorRelationInfo IsTargetText="False" Target="26">
+                              <uc:AnchorRelationInfo.Anchors>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>26</x:Int32>
+                                  <x:Int32>27</x:Int32>
+                                  <x:Int32>28</x:Int32>
+                                  <x:Int32>29</x:Int32>
+                                  <x:Int32>30</x:Int32>
+                                </x:Array>
+                              </uc:AnchorRelationInfo.Anchors>
+                            </uc:AnchorRelationInfo>
+                          </scg:List>
+                        </uc:CVCache.CvAnchorRelations>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                            <uc:CvElementInfo Category="Icon" Region="292, 4, 23, 22" />
+                            <uc:CvElementInfo Category="Icon" Region="59, 37, 24, 25" />
+                            <uc:CvElementInfo Category="Icon" Region="108, 75, 23, 21" />
+                            <uc:CvElementInfo Category="Icon" Region="1000, 39, 23, 23" />
+                            <uc:CvElementInfo Category="Icon" Region="1054, 38, 23, 25" />
+                            <uc:CvElementInfo Category="Icon" Region="308, 75, 23, 21" />
+                            <uc:CvElementInfo Category="Icon" Region="11, 75, 22, 19" />
+                            <uc:CvElementInfo Category="Button" Region="430, 108, 71, 34" />
+                            <uc:CvElementInfo Category="MaximizeButton" Region="1288, 6, 18, 18" />
+                            <uc:CvElementInfo Category="CloseButton" Region="261, 6, 19, 19" />
+                            <uc:CvElementInfo Category="Icon" Region="1102, 39, 24, 24" />
+                            <uc:CvElementInfo Category="Icon" Region="221, 75, 22, 20" />
+                            <uc:CvElementInfo Category="Icon" Region="1289, 36, 28, 29" />
+                            <uc:CvElementInfo Category="Button" Region="46, 0, 243, 33" />
+                            <uc:CvElementInfo Category="Icon" Region="1190, 38, 25, 24" />
+                            <uc:CvElementInfo Category="Icon" Region="1146, 38, 26, 25" />
+                            <uc:CvElementInfo Category="Icon" Region="708, 489, 20, 19" />
+                            <uc:CvElementInfo Category="MinimizeButton" Region="1241, 7, 21, 17" />
+                            <uc:CvElementInfo Category="CloseButton" Region="1334, 6, 18, 18" />
+                            <uc:CvElementInfo Category="Button" Region="999, 327, 57, 48" />
+                            <uc:CvElementInfo Category="Icon" Region="55, 5, 21, 21" />
+                            <uc:CvElementInfo Category="CloseButton" Region="1326, 114, 22, 22" />
+                            <uc:CvElementInfo Category="Icon" Region="1331, 42, 23, 17" />
+                            <uc:CvElementInfo Category="Icon" Region="115, 40, 21, 21" />
+                            <uc:CvElementInfo Category="Icon" Region="215, 490, 20, 18" />
+                            <uc:CvElementInfo Category="Icon" Region="16, 38, 25, 22" />
+                            <uc:CvElementInfo Category="InputBox" Region="292, 328, 706, 45" />
+                            <uc:CvElementInfo Category="Icon" Region="12, 4, 23, 22" />
+                            <uc:CvElementInfo Category="Icon" Region="1014, 337, 26, 25" />
+                            <uc:CvElementInfo Category="Button" Region="1088, 646, 45, 24" />
+                            <uc:CvElementInfo Category="Button" Region="1224, 34, 99, 32" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="647, 147, 58, 45" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="0, 0, 49, 34" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1088, 646, 46, 25" />
+                            <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="1088, 646, 44, 24" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="677, 463, 479, 152" />
+                            <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="12, 4, 24, 23" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1224, 34, 97, 32" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="15, 37, 26, 23" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1089, 646, 45, 24" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="12, 5, 22, 21" />
+                            <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1104, 647, 27, 22" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1324, 29, 40, 76" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1337, 101, 25, 48" />
+                            <uc:CvElementInfo Category="InputBox" Region="99, 34, 940, 33" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="114, 39, 21, 23" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="121">
+                            <uc:OcrTextInfo Region="83, 9, 26, 12" Text="New" />
+                            <uc:OcrTextInfo Region="110, 9, 48, 12" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="158, 9, 21, 12" Text="tab" />
+                            <uc:OcrTextInfo Region="265, 10, 11, 12" Text="X" />
+                            <uc:OcrTextInfo Region="295, 7, 18, 17" Text="+" />
+                            <uc:OcrTextInfo Region="1244, 5, 13, 13" Text="_" />
+                            <uc:OcrTextInfo Region="1336, 9, 13, 13" Text="X" />
+                            <uc:OcrTextInfo Region="1239, 44, 48, 12" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="1333, 39, 17, 14" Text="..." />
+                            <uc:OcrTextInfo Region="37, 79, 24, 12" Text="Real" />
+                            <uc:OcrTextInfo Region="62, 79, 34, 12" Text="Estate" />
+                            <uc:OcrTextInfo Region="134, 79, 75, 15" Text="Programming" />
+                            <uc:OcrTextInfo Region="247, 79, 49, 15" Text="Teaching" />
+                            <uc:OcrTextInfo Region="333, 79, 27, 12" Text="Jobs" />
+                            <uc:OcrTextInfo Region="19, 118, 44, 13" Text="&quot;UiPath" />
+                            <uc:OcrTextInfo Region="65, 119, 48, 12" Text="Browser" />
+                            <uc:OcrTextInfo Region="113, 118, 71, 13" Text="Automation" />
+                            <uc:OcrTextInfo Region="185, 119, 31, 12" Text="23.4&quot;" />
+                            <uc:OcrTextInfo Region="218, 118, 42, 13" Text="started" />
+                            <uc:OcrTextInfo Region="261, 118, 65, 16" Text="debugging" />
+                            <uc:OcrTextInfo Region="328, 118, 23, 13" Text="this" />
+                            <uc:OcrTextInfo Region="352, 118, 49, 13" Text="browser" />
+                            <uc:OcrTextInfo Region="446, 119, 38, 12" Text="Cancel" />
+                            <uc:OcrTextInfo Region="1329, 118, 15, 15" Text="X" />
+                            <uc:OcrTextInfo Region="556, 207, 113, 25" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="674, 206, 119, 31" Text="browsing" />
+                            <uc:OcrTextInfo Region="306, 344, 55, 13" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="363, 344, 41, 13" Text="search" />
+                            <uc:OcrTextInfo Region="406, 344, 28, 13" Text="with" />
+                            <uc:OcrTextInfo Region="437, 344, 60, 13" Text="Microsoft" />
+                            <uc:OcrTextInfo Region="500, 344, 28, 15" Text="Bing" />
+                            <uc:OcrTextInfo Region="239, 493, 37, 13" Text="What" />
+                            <uc:OcrTextInfo Region="277, 493, 58, 13" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="337, 493, 61, 16" Text="browsing" />
+                            <uc:OcrTextInfo Region="400, 493, 32, 13" Text="does" />
+                            <uc:OcrTextInfo Region="709, 491, 16, 16" Text="X" />
+                            <uc:OcrTextInfo Region="730, 493, 37, 13" Text="What" />
+                            <uc:OcrTextInfo Region="769, 493, 57, 13" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="828, 493, 61, 16" Text="browsing" />
+                            <uc:OcrTextInfo Region="891, 493, 48, 13" Text="doesn't" />
+                            <uc:OcrTextInfo Region="941, 493, 19, 13" Text="do" />
+                            <uc:OcrTextInfo Region="218, 520, 41, 12" Text="Deletes" />
+                            <uc:OcrTextInfo Region="260, 523, 27, 11" Text="your" />
+                            <uc:OcrTextInfo Region="288, 520, 50, 15" Text="browsing" />
+                            <uc:OcrTextInfo Region="339, 520, 23, 12" Text="info" />
+                            <uc:OcrTextInfo Region="363, 520, 30, 12" Text="when" />
+                            <uc:OcrTextInfo Region="394, 523, 22, 12" Text="you" />
+                            <uc:OcrTextInfo Region="418, 520, 29, 12" Text="close" />
+                            <uc:OcrTextInfo Region="448, 520, 14, 12" Text="all" />
+                            <uc:OcrTextInfo Region="464, 520, 47, 12" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="512, 520, 49, 12" Text="windows" />
+                            <uc:OcrTextInfo Region="710, 520, 26, 12" Text="Hide" />
+                            <uc:OcrTextInfo Region="737, 523, 27, 12" Text="your" />
+                            <uc:OcrTextInfo Region="765, 520, 50, 15" Text="browsing" />
+                            <uc:OcrTextInfo Region="817, 520, 27, 12" Text="from" />
+                            <uc:OcrTextInfo Region="845, 523, 27, 12" Text="your" />
+                            <uc:OcrTextInfo Region="873, 520, 38, 14" Text="school," />
+                            <uc:OcrTextInfo Region="913, 521, 54, 13" Text="employer," />
+                            <uc:OcrTextInfo Region="969, 523, 13, 9" Text="or" />
+                            <uc:OcrTextInfo Region="983, 521, 44, 11" Text="internet" />
+                            <uc:OcrTextInfo Region="1028, 520, 38, 12" Text="service" />
+                            <uc:OcrTextInfo Region="1067, 520, 47, 14" Text="provider" />
+                            <uc:OcrTextInfo Region="217, 544, 32, 12" Text="Saves" />
+                            <uc:OcrTextInfo Region="251, 544, 59, 13" Text="collections," />
+                            <uc:OcrTextInfo Region="313, 544, 48, 14" Text="favorites," />
+                            <uc:OcrTextInfo Region="364, 544, 21, 12" Text="and" />
+                            <uc:OcrTextInfo Region="387, 544, 60, 12" Text="downloads" />
+                            <uc:OcrTextInfo Region="448, 544, 24, 13" Text="(but" />
+                            <uc:OcrTextInfo Region="473, 545, 20, 11" Text="not" />
+                            <uc:OcrTextInfo Region="494, 544, 54, 12" Text="download" />
+                            <uc:OcrTextInfo Region="550, 544, 41, 15" Text="history)" />
+                            <uc:OcrTextInfo Region="710, 544, 25, 12" Text="Give" />
+                            <uc:OcrTextInfo Region="736, 547, 21, 11" Text="you" />
+                            <uc:OcrTextInfo Region="759, 544, 55, 12" Text="additional" />
+                            <uc:OcrTextInfo Region="815, 544, 57, 15" Text="protection" />
+                            <uc:OcrTextInfo Region="873, 544, 27, 12" Text="from" />
+                            <uc:OcrTextInfo Region="902, 545, 44, 14" Text="tracking" />
+                            <uc:OcrTextInfo Region="948, 544, 15, 15" Text="by" />
+                            <uc:OcrTextInfo Region="964, 544, 40, 12" Text="default" />
+                            <uc:OcrTextInfo Region="218, 568, 47, 12" Text="Prevents" />
+                            <uc:OcrTextInfo Region="266, 568, 53, 12" Text="Microsoft" />
+                            <uc:OcrTextInfo Region="320, 568, 25, 14" Text="Bing" />
+                            <uc:OcrTextInfo Region="346, 568, 48, 12" Text="searches" />
+                            <uc:OcrTextInfo Region="395, 568, 27, 12" Text="from" />
+                            <uc:OcrTextInfo Region="424, 568, 32, 15" Text="being" />
+                            <uc:OcrTextInfo Region="457, 568, 57, 12" Text="associated" />
+                            <uc:OcrTextInfo Region="516, 568, 24, 12" Text="with" />
+                            <uc:OcrTextInfo Region="541, 571, 22, 12" Text="you" />
+                            <uc:OcrTextInfo Region="709, 568, 24, 12" Text="Add" />
+                            <uc:OcrTextInfo Region="735, 568, 54, 12" Text="additional" />
+                            <uc:OcrTextInfo Region="791, 568, 56, 15" Text="protection" />
+                            <uc:OcrTextInfo Region="849, 569, 13, 11" Text="to" />
+                            <uc:OcrTextInfo Region="863, 568, 36, 12" Text="what's" />
+                            <uc:OcrTextInfo Region="900, 568, 49, 12" Text="available" />
+                            <uc:OcrTextInfo Region="950, 568, 11, 12" Text="in" />
+                            <uc:OcrTextInfo Region="963, 568, 39, 12" Text="normal" />
+                            <uc:OcrTextInfo Region="1004, 568, 50, 14" Text="browsing" />
+                            <uc:OcrTextInfo Region="217, 651, 47, 16" Text="Always" />
+                            <uc:OcrTextInfo Region="266, 654, 23, 10" Text="use" />
+                            <uc:OcrTextInfo Region="291, 651, 47, 13" Text="&quot;Strict&quot;" />
+                            <uc:OcrTextInfo Region="339, 651, 54, 16" Text="tracking" />
+                            <uc:OcrTextInfo Region="395, 651, 71, 16" Text="prevention" />
+                            <uc:OcrTextInfo Region="467, 651, 37, 13" Text="when" />
+                            <uc:OcrTextInfo Region="506, 651, 61, 16" Text="browsing" />
+                            <uc:OcrTextInfo Region="568, 651, 59, 13" Text="InPrivate" />
+                            <uc:OcrTextInfo Region="218, 674, 9, 12" Text="If" />
+                            <uc:OcrTextInfo Region="228, 674, 20, 12" Text="this" />
+                            <uc:OcrTextInfo Region="250, 675, 10, 11" Text="is" />
+                            <uc:OcrTextInfo Region="261, 674, 19, 14" Text="off," />
+                            <uc:OcrTextInfo Region="281, 674, 26, 12" Text="we'll" />
+                            <uc:OcrTextInfo Region="309, 677, 20, 9" Text="use" />
+                            <uc:OcrTextInfo Region="330, 674, 19, 12" Text="the" />
+                            <uc:OcrTextInfo Region="351, 677, 29, 9" Text="same" />
+                            <uc:OcrTextInfo Region="381, 674, 45, 14" Text="tracking" />
+                            <uc:OcrTextInfo Region="428, 674, 58, 14" Text="prevention" />
+                            <uc:OcrTextInfo Region="488, 674, 38, 14" Text="setting" />
+                            <uc:OcrTextInfo Region="527, 677, 13, 8" Text="as" />
+                            <uc:OcrTextInfo Region="542, 677, 8, 9" Text="a" />
+                            <uc:OcrTextInfo Region="551, 674, 39, 12" Text="normal" />
+                            <uc:OcrTextInfo Region="592, 674, 50, 14" Text="browsing" />
+                            <uc:OcrTextInfo Region="644, 674, 43, 12" Text="window" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b209cd58-7af3-43d9-9aba-4d5491edbfd6" InformativeScreenshot="1e43cc03e54eea1b9293341c9a086095" Selector="&lt;html app='msedge.exe' title='New InPrivate tab' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="496,1657" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="5896477c-e9fb-46fc-a263-1f7f733c2f97" sap:VirtualizedContainerService.HintSize="434,526" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
+                <p:CVScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (1188,85,19,27) OffsetPoint: (0,59)&quot;]" DesignTimeCacheId="5896477c-e9fb-46fc-a263-1f7f733c2f97" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="0bcaf39d580206d4be93e1aaad8b1dcc" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                        <p:CvClickWithDescriptor.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </p:CvClickWithDescriptor.CursorPosition>
+                        <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                          <uc:CvDescriptor Id="3b0c20d0-5666-4649-b41d-e943ed81c3f4" TargetPointOffset="0, 59">
+                            <uc:CvDescriptor.Target>
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1188, 85, 19, 27" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAbCAYAAACeA7ShAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVEhL7dHRCcAgDEXRjOIojuImjuIojuIoKSmkta+pRWjBj1x4X8UDVuIPc+wspcQhBCaiy7BXLMZ4Q3TYEKu1mogOG2I5ZxPRYVOY/LfW2jFsCpOHGGVipZR9crjH5DH0mwwzsR54mlwZWwOTK2P/P4DmmJljK2OzrYoxb48EqwHTbVxQAAAAAElFTkSuQmCC" />
+                            </uc:CvDescriptor.Target>
+                          </uc:CvDescriptor>
+                        </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <p:CvClickWithDescriptor.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="64a24cc1-16b2-412e-9ab4-cfc11ca96323">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </p:CvClickWithDescriptor.Target>
+                      </p:CvClickWithDescriptor>
+                    </Sequence>
+                  </ActivityAction>
+                </p:CVScope.Body>
+                <p:CVScope.DesignTimeCacheContainer>
+                  <uc:CvCacheContainer x:Name="__ReferenceID0">
+                    <uc:CvCacheContainer.Caches>
+                      <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
+                        <uc:CVCache DataSent="False" DisplayName="1" Id="5896477c-e9fb-46fc-a263-1f7f733c2f97" InformativeScreenshot="ce25fadcee64dc1ef265947deec52910" LogicalPosition="0, 0" OcrText="Music Reports Music Licensing e X + _ X https://www.musicreports.com InPrivate ... Songdex Cuetrak f Music Reports TRUE to RIGHTS&quot; Our Services Press Our Team Contact Careers FAQ Log in Sign Up Manage Music Rights... the Right Way Serving Owners and Users of Music for 25+ Years License Music in High Volume Pay Music Royalties Music Business Strategic Consulting Cue Sheet Management License and Administer Music Rights Globally DDEX Reporting" Position="0, 0" ScreenshotGuid="da77d590-6497-48f4-b035-7542d8d380fe" ServerVersion="1">
+                          <uc:CVCache.CvAnchorRelations>
+                            <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                              <uc:AnchorRelationInfo IsTargetText="False" Target="4">
+                                <uc:AnchorRelationInfo.Anchors>
+                                  <x:Array Type="x:Int32">
+                                    <x:Int32>9</x:Int32>
+                                  </x:Array>
+                                </uc:AnchorRelationInfo.Anchors>
+                              </uc:AnchorRelationInfo>
+                            </scg:List>
+                          </uc:CVCache.CvAnchorRelations>
+                          <uc:CVCache.CvUiElements>
+                            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                              <uc:CvElementInfo Category="Icon" Region="1000, 38, 24, 23" />
+                              <uc:CvElementInfo Category="Icon" Region="292, 4, 23, 22" />
+                              <uc:CvElementInfo Category="Icon" Region="1054, 39, 23, 24" />
+                              <uc:CvElementInfo Category="Icon" Region="60, 37, 24, 25" />
+                              <uc:CvElementInfo Category="InputBox" Region="101, 34, 935, 34" />
+                              <uc:CvElementInfo Category="CloseButton" Region="262, 6, 18, 18" />
+                              <uc:CvElementInfo Category="Button" Region="46, 0, 240, 33" />
+                              <uc:CvElementInfo Category="Icon" Region="1102, 39, 23, 23" />
+                              <uc:CvElementInfo Category="MaximizeButton" Region="1287, 6, 18, 18" />
+                              <uc:CvElementInfo Category="Icon" Region="1289, 36, 27, 28" />
+                              <uc:CvElementInfo Category="Icon" Region="53, 4, 25, 22" />
+                              <uc:CvElementInfo Category="Button" Region="1250, 134, 82, 36" />
+                              <uc:CvElementInfo Category="Icon" Region="1190, 39, 24, 22" />
+                              <uc:CvElementInfo Category="Icon" Region="1291, 668, 46, 47" />
+                              <uc:CvElementInfo Category="Button" Region="1174, 134, 71, 37" />
+                              <uc:CvElementInfo Category="Icon" Region="116, 39, 20, 22" />
+                              <uc:CvElementInfo Category="Icon" Region="339, 85, 35, 28" />
+                              <uc:CvElementInfo Category="Icon" Region="1146, 39, 24, 23" />
+                              <uc:CvElementInfo Category="Icon" Region="1287, 86, 26, 25" />
+                              <uc:CvElementInfo Category="Icon" Region="1236, 85, 27, 26" />
+                              <uc:CvElementInfo Category="MinimizeButton" Region="1241, 7, 21, 17" />
+                              <uc:CvElementInfo Category="CloseButton" Region="1334, 6, 18, 18" />
+                              <uc:CvElementInfo Category="ArrowButton" Region="318, 143, 17, 19" />
+                              <uc:CvElementInfo Category="Icon" Region="960, 37, 24, 24" />
+                              <uc:CvElementInfo Category="Icon" Region="1331, 43, 22, 15" />
+                              <uc:CvElementInfo Category="Icon" Region="1188, 85, 19, 27" />
+                              <uc:CvElementInfo Category="ArrowButton" Region="1345, 73, 17, 17" />
+                              <uc:CvElementInfo Category="ArrowButton" Region="1345, 703, 18, 20" />
+                              <uc:CvElementInfo Category="Icon" Region="12, 4, 23, 22" />
+                              <uc:CvElementInfo Category="Icon" Region="15, 38, 25, 23" />
+                              <uc:CvElementInfo Category="Icon" Region="17, 92, 78, 70" />
+                              <uc:CvElementInfo Category="Icon" Region="227, 80, 34, 34" />
+                              <uc:CvElementInfo Category="Button" Region="1224, 34, 98, 33" />
+                              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="0, 0, 49, 34" />
+                              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="15, 37, 26, 24" />
+                              <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="12, 4, 24, 24" />
+                              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1225, 34, 97, 32" />
+                              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="880, 660, 461, 65" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1040, 319, 302, 40" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="958, 601, 21, 41" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="984, 541, 313, 27" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="932, 645, 48, 82" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="976, 593, 332, 26" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="677, 415, 167, 35" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="955, 642, 29, 86" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="735, 609, 156, 27" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="661, 379, 165, 36" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="674, 399, 176, 36" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="636, 366, 158, 34" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="976, 647, 65, 76" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="962, 568, 306, 26" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="943, 322, 275, 40" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1288, 620, 55, 101" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1169, 590, 91, 28" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="593, 420, 345, 47" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="688, 427, 157, 33" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="874, 371, 192, 44" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="915, 641, 49, 87" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="968, 489, 311, 28" />
+                              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="743, 575, 174, 34" />
+                            </scg:List>
+                          </uc:CVCache.CvUiElements>
+                          <uc:CVCache.OcrTexts>
+                            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="70">
+                              <uc:OcrTextInfo Region="83, 9, 33, 12" Text="Music" />
+                              <uc:OcrTextInfo Region="118, 9, 42, 15" Text="Reports" />
+                              <uc:OcrTextInfo Region="167, 9, 34, 12" Text="Music" />
+                              <uc:OcrTextInfo Region="202, 9, 50, 15" Text="Licensing" />
+                              <uc:OcrTextInfo Region="253, 13, 6, 8" Text="e" />
+                              <uc:OcrTextInfo Region="265, 10, 11, 12" Text="X" />
+                              <uc:OcrTextInfo Region="295, 7, 18, 17" Text="+" />
+                              <uc:OcrTextInfo Region="1244, 5, 13, 13" Text="_" />
+                              <uc:OcrTextInfo Region="1336, 9, 13, 13" Text="X" />
+                              <uc:OcrTextInfo Region="148, 44, 189, 15" Text="https://www.musicreports.com" />
+                              <uc:OcrTextInfo Region="1239, 44, 48, 12" Text="InPrivate" />
+                              <uc:OcrTextInfo Region="1333, 39, 17, 14" Text="..." />
+                              <uc:OcrTextInfo Region="259, 93, 57, 16" Text="Songdex" />
+                              <uc:OcrTextInfo Region="374, 92, 51, 14" Text="Cuetrak" />
+                              <uc:OcrTextInfo Region="1190, 86, 15, 25" Text="f" />
+                              <uc:OcrTextInfo Region="100, 106, 66, 22" Text="Music" />
+                              <uc:OcrTextInfo Region="100, 127, 87, 25" Text="Reports" />
+                              <uc:OcrTextInfo Region="100, 151, 27, 9" Text="TRUE" />
+                              <uc:OcrTextInfo Region="129, 151, 12, 9" Text="to" />
+                              <uc:OcrTextInfo Region="143, 151, 41, 9" Text="RIGHTS&quot;" />
+                              <uc:OcrTextInfo Region="228, 144, 27, 15" Text="Our" />
+                              <uc:OcrTextInfo Region="257, 144, 62, 15" Text="Services" />
+                              <uc:OcrTextInfo Region="354, 144, 41, 15" Text="Press" />
+                              <uc:OcrTextInfo Region="418, 144, 27, 15" Text="Our" />
+                              <uc:OcrTextInfo Region="446, 144, 42, 15" Text="Team" />
+                              <uc:OcrTextInfo Region="511, 144, 58, 15" Text="Contact" />
+                              <uc:OcrTextInfo Region="591, 144, 56, 15" Text="Careers" />
+                              <uc:OcrTextInfo Region="670, 144, 30, 16" Text="FAQ" />
+                              <uc:OcrTextInfo Region="1187, 144, 28, 18" Text="Log" />
+                              <uc:OcrTextInfo Region="1218, 144, 14, 15" Text="in" />
+                              <uc:OcrTextInfo Region="1262, 144, 34, 18" Text="Sign" />
+                              <uc:OcrTextInfo Region="1298, 143, 22, 19" Text="Up" />
+                              <uc:OcrTextInfo Region="946, 327, 133, 39" Text="Manage" />
+                              <uc:OcrTextInfo Region="1086, 326, 102, 33" Text="Music" />
+                              <uc:OcrTextInfo Region="947, 364, 126, 40" Text="Rights..." />
+                              <uc:OcrTextInfo Region="1080, 363, 56, 33" Text="the" />
+                              <uc:OcrTextInfo Region="1142, 363, 87, 41" Text="Right" />
+                              <uc:OcrTextInfo Region="1235, 364, 74, 40" Text="Way" />
+                              <uc:OcrTextInfo Region="945, 420, 86, 26" Text="Serving" />
+                              <uc:OcrTextInfo Region="1035, 420, 87, 22" Text="Owners" />
+                              <uc:OcrTextInfo Region="1127, 418, 44, 24" Text="and" />
+                              <uc:OcrTextInfo Region="1176, 419, 66, 23" Text="Users" />
+                              <uc:OcrTextInfo Region="1246, 418, 27, 23" Text="of" />
+                              <uc:OcrTextInfo Region="945, 450, 71, 22" Text="Music" />
+                              <uc:OcrTextInfo Region="1019, 448, 36, 23" Text="for" />
+                              <uc:OcrTextInfo Region="1058, 450, 45, 21" Text="25+" />
+                              <uc:OcrTextInfo Region="1106, 449, 66, 23" Text="Years" />
+                              <uc:OcrTextInfo Region="986, 496, 57, 15" Text="License" />
+                              <uc:OcrTextInfo Region="1045, 496, 45, 15" Text="Music" />
+                              <uc:OcrTextInfo Region="1092, 496, 14, 15" Text="in" />
+                              <uc:OcrTextInfo Region="1108, 495, 36, 19" Text="High" />
+                              <uc:OcrTextInfo Region="1145, 496, 57, 15" Text="Volume" />
+                              <uc:OcrTextInfo Region="986, 522, 28, 18" Text="Pay" />
+                              <uc:OcrTextInfo Region="1016, 522, 45, 15" Text="Music" />
+                              <uc:OcrTextInfo Region="1063, 522, 66, 18" Text="Royalties" />
+                              <uc:OcrTextInfo Region="986, 548, 45, 15" Text="Music" />
+                              <uc:OcrTextInfo Region="1033, 548, 67, 15" Text="Business" />
+                              <uc:OcrTextInfo Region="1101, 548, 67, 18" Text="Strategic" />
+                              <uc:OcrTextInfo Region="1169, 548, 78, 18" Text="Consulting" />
+                              <uc:OcrTextInfo Region="986, 574, 30, 15" Text="Cue" />
+                              <uc:OcrTextInfo Region="1017, 574, 43, 15" Text="Sheet" />
+                              <uc:OcrTextInfo Region="1062, 574, 96, 18" Text="Management" />
+                              <uc:OcrTextInfo Region="986, 599, 57, 15" Text="License" />
+                              <uc:OcrTextInfo Region="1044, 599, 29, 15" Text="and" />
+                              <uc:OcrTextInfo Region="1075, 599, 80, 15" Text="Administer" />
+                              <uc:OcrTextInfo Region="1157, 599, 45, 15" Text="Music" />
+                              <uc:OcrTextInfo Region="1204, 598, 47, 19" Text="Rights" />
+                              <uc:OcrTextInfo Region="985, 625, 60, 18" Text="Globally" />
+                              <uc:OcrTextInfo Region="986, 651, 42, 15" Text="DDEX" />
+                              <uc:OcrTextInfo Region="1030, 651, 70, 18" Text="Reporting" />
+                            </scg:List>
+                          </uc:CVCache.OcrTexts>
+                        </uc:CVCache>
+                      </scg:List>
+                    </uc:CvCacheContainer.Caches>
+                  </uc:CvCacheContainer>
+                </p:CVScope.DesignTimeCacheContainer>
+                <p:CVScope.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_5" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                  </ActivityFunc>
+                </p:CVScope.OCREngine>
+                <p:CVScope.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a1fc08fe-638a-46b2-b6e4-39c47022463f" InformativeScreenshot="00c09b10925e68cbf66c5c853695a280" Selector="&lt;html app='msedge.exe' title='Music Reports | Music Licensing and Royalty Accounting at Scale' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </p:CVScope.Target>
+                <p:CVScope.UseLocalServer>
+                  <InArgument x:TypeArguments="x:Boolean" />
+                </p:CVScope.UseLocalServer>
+              </p:CVScope>
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DesignTimeCacheContainer="{x:Reference __ReferenceID0}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="5896477c-e9fb-46fc-a263-1f7f733c2f97" sap:VirtualizedContainerService.HintSize="434,976" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V6">
+                <p:CVScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (517,517,317,44)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Username' (518,497,72,13)&quot;]" DesignTimeCacheId="df071b68-37bc-41ce-ae84-498b80d918ee" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="3ebfdd39818d4b17ac6236475a5d4424" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;hubertmaxwell34@gmail.com&quot;]" Version="V6">
+                        <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                          <uc:CvDescriptor Id="908e9ed5-b70a-4efa-98c0-6d71df7ade3b">
+                            <uc:CvDescriptor.Anchors>
+                              <x:Array Type="uc:CvElementDescriptor">
+                                <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="518, 497, 72, 13" ElementType="Text" Text="Username" />
+                              </x:Array>
+                            </uc:CvDescriptor.Anchors>
+                            <uc:CvDescriptor.Target>
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="517, 517, 317, 44" ElementType="InputBox" />
+                            </uc:CvDescriptor.Target>
+                          </uc:CvDescriptor>
+                        </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                        <p:CvTypeIntoWithDescriptor.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4eb84584-488e-43b0-89f2-90a89929e53e">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </p:CvTypeIntoWithDescriptor.Target>
+                      </p:CvTypeIntoWithDescriptor>
+                      <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (517,592,318,43)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Password' (517,571,68,14)&quot;]" DesignTimeCacheId="df071b68-37bc-41ce-ae84-498b80d918ee" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="aec6255ce0ae80ce677211a1d12599b1" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Mastermind10$&quot;]" Version="V6">
+                        <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                          <uc:CvDescriptor Id="228d7cd8-4163-43a9-a7cb-9df0ff1c751c">
+                            <uc:CvDescriptor.Anchors>
+                              <x:Array Type="uc:CvElementDescriptor">
+                                <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="517, 571, 68, 14" ElementType="Text" Text="Password" />
+                              </x:Array>
+                            </uc:CvDescriptor.Anchors>
+                            <uc:CvDescriptor.Target>
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="517, 592, 318, 43" ElementType="InputBox" />
+                            </uc:CvDescriptor.Target>
+                          </uc:CvDescriptor>
+                        </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                        <p:CvTypeIntoWithDescriptor.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="70e0257e-da20-46d9-8e02-b2d3793574a4">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </p:CvTypeIntoWithDescriptor.Target>
+                      </p:CvTypeIntoWithDescriptor>
+                      <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Remember me' (541,672,100,13) OffsetPoint: (115,38)&quot;]" DesignTimeCacheId="df071b68-37bc-41ce-ae84-498b80d918ee" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="b199ea2d080d71bfa7f6295a535985e3" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                        <p:CvClickWithDescriptor.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </p:CvClickWithDescriptor.CursorPosition>
+                        <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                          <uc:CvDescriptor Id="efb51cdf-2141-43ee-b17f-596093a99186" TargetPointOffset="115, 38">
+                            <uc:CvDescriptor.Target>
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="541, 672, 100, 13" ElementType="Text" Text="Remember me" />
+                            </uc:CvDescriptor.Target>
+                          </uc:CvDescriptor>
+                        </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <p:CvClickWithDescriptor.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="17ac027f-bb4c-418d-96bc-77814c0c71fc">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </p:CvClickWithDescriptor.Target>
+                      </p:CvClickWithDescriptor>
+                    </Sequence>
+                  </ActivityAction>
+                </p:CVScope.Body>
+                <p:CVScope.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_6" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                  </ActivityFunc>
+                </p:CVScope.OCREngine>
+                <p:CVScope.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="524e837b-fa19-45ef-bb0b-ae3ea91c7dfb" InformativeScreenshot="00c09b10925e68cbf66c5c853695a280" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Music Reports Login - [InPrivate] - Microsoft​ Edge' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </p:CVScope.Target>
+                <p:CVScope.UseLocalServer>
+                  <InArgument x:TypeArguments="x:Boolean" />
+                </p:CVScope.UseLocalServer>
+              </p:CVScope>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABJkSURBVGhDvZkHWJPn2sexVpENKtSuq9W2R6ugKLIEB1oHskRRUUTcWidVUFAQBYGALHEr1lFXtWrFiQokJIEwQnbCCO5qtf0+Tsfp+U5p8z/38yZBrVrP19pzX9f/ysu78v/d9/087/sEi5cR3SPmx/YqOMXvd07X6lra0uYquAFXwXWSntQM14pGuAl1cBNp0PeSuLXPiXP6d3k5Z2wGDPA33eK/Hy4Ri2L7HanRDyi/b3Dn30d//l248W/DTXDTZL4F/ch8v4omAtDBVaglABVJiQGVcrhXSTFQUgOPSmFbv8OfyuzcXf87MC4RH8cOOHez1YP/vxjE/wYD+Q/AAAYQQH8O4PZvABpJDEBDMgK4iRRGgKo6DK6pgmetCL71ZfCp+KL1zRlhsaaverlh6+br735Kf9+T/z0G81vhwf8fDqDdPBnvL7hFYu3TQiLzHECDUUL1YwByqkI9BzCoWgIfKZ9UBn95CUaoiuHH33ffcVDvl1eRnvHbizzLvzcw85787wjg7wRgrIC74B6JARjNu5n7XkCtI6DsCxiAhpMRQEGSob+4nqpQQwCVVIEKDmCY4jwHMEZ7HON0nxnc0mcXmSz88XDbWyXz5v8DXvwfyDzLPjNvzP4gAbUPAQwwAbhR5h8BMPM6Mq7lzPetUFMVVATBAOoJQGoCkMC7rgy+0msYKr+IkerTGKs7juDmT0n7MLo8TW+y8v8P9yMavTf/JzwCYNlvJRGA4CHpawL4igDuEMB1DsDYOpR1Mt9XwIybpSYpOblSBRiEe1U1jQERvGoFHIC/jAGcwmiqQFDTfoTq92DijUKE6zJ/sH7T8R2Trf8sBpJ5X/4/ybwZgLXP3znzHpz5B+0ArHX6c9lnmTf3vdm46jE9CdBfXItBEmqhGjPAJRPAMYxvNANsxdTbOZjSnPqTydqLo//eGhkz79MO8OMzAL7GQDLvzg1ec+83GluHZh1jxplpRbvxRzK20cAqCQZXC+HFAVyhFqIxoDyFwIYDCG7aizD9Dky+mYvI2zxEf7UBEyWLXtxO78XvKhrC/xeMAMw80w8E8B0BsPb5th1gENf/N9G/gtqnwvjAYnO+cdCazZv1WwApBoir4SFhAKUEUEIVOI+P1McwVnvQBLAdETfyMO12JgGkYPaDRIw+GHLGZPXpsHMb4u9b/i/DEP7/cQC+ZN6HzHtT9r0o+xyAgAGw9mGzz53HAKgC3JxPg5WT0ejzxI2BSglVoZIDGCK9wGXfCHCAMz/pRg6ZTyOlI/peMuY+iMP8h8sMPbx7PHuK9Tx15z7L/pMAP5oAWuFafAfvH1KjZ1E9eu4jfSqlzxp88LkcH15ueAxA9bsA/WgmYv3vXllJFaAptO4yZb8YwxVfYKTyOAJ1RQhp2obwljxqIR4BbETMvTXMPD7+dj5mKqfcNll+FK9HLI/14/9M5s0AP3Hqd/Iu3sgsh+Pyz2C/hLTiOBxXnoBT/GmjVp2E08pjcFp+CN0/OYi3t17FB1/WP9O4Wa5CNojrCKCKAPjwrrnCVWBo/Wl8pDpEFdiP4MadmNSShchbqZhxJxExX63CgodLOICPv52L/os+fPKJ7X3um1Y/fhs9BY0QA778Fk5xp2G75CjsYk/DPq4YDqsvwDGxBI7rrsAp+Sq6rr+GbpyukkrQPekSuiWeRbeVR+CSeAQfXJA9Zb6fUE6zUD0B1GJgpRCeklL41Fwk819ihPwERqv2I1C7CyGNWxCuz8bk62mYfnsdBzDv68VY8GAeFj2cjVnaSfdN1i0s3qDs+5vM+5T+E2/lSWGz5ARsPjkL21UXYLemBPZrS+GQLIDjBhGcUivhtKkKXUndMiTonkGf6ZXovkkI57RyOG+8Buek8+hOIG/mXcSH/CfbiWXfTVTDtZCn5CoHMEx6EgHyoxzAWPVeAiigCmRgyvVkzLgVh5l3YjHn3mIsfDAXix7MxOJvovC6d3fjWPA40qj35/8C39J/oWtyOaxXFMNm1UXYrr4C27V82CWL4bBBAoe0Ojhm1MOJJ0fXLCW6ZivRbbMS3UnOOXL6rIdzdi2ceVVwSRfCJa0UzmvPokfq6XYIrv9F1XAXizGosowASgjgPIZKjyNAdhCjFbsxTr0DQdo8hDdtwpSWtZh+cxVi7i7HnLvzMO+r2Vj09XQsfhiJ8Qf9jDOSX3mbgZnvRtm1WnkJVnFXYJ1QDtskMWxTamCXKoV9uhIOmSo4ZGvgtFmHrrkN6JrXiG75TA3oTnIu0MI5XwPnPAVccurhkiWBS0YFnNdfQo/0Yg7CVSglAAkGiETUQnwMrrpCAGcwrP4oRsr2YoxiO8Zr8hGizcSEhhREXl+NqBsrMPP20naABfeisPD+VMxWj79P7bMidihl35ky22XVVVjFl8I6UQjrZAlsNkhhm6aEXYYa9jwdmW+Ew+ZGOOY2wSmvGV3zSQV6dNuiR/ctzXAu1JOaSI1w2aKFS74Cr+XU4TWeGC4bSvBW4VVa2FSReSEGisvgIS6Bt+RLeFcTQN1BAtiDMfICjFPkIkSTjvCGJExujse0lmWIvjEfs27Px9y7MwlgGgew8N4Eg4XH7hpZ32MPYRlXji6rBeiSIIZVcg2sN8hgk6aCbboWdpkNsMtqhH12EwE0wyGnGY55ejjltxAAE4NoQffCFjhvbaHsy3+0m56xz3rk7JXWATFx9tPSDnXfePV755TL+NvpSriLBBgkvkwAF+EjOQnf6hMmgF0EkI9x8iyEalLoHWg1IhpXI1K/HNP1CxB9fTZibkZj3t1IMh/BAGAx5NI/DHYpUliuFsEyoRJdkmphlSKHdaoKNpu0sMlogG1mIwE0wy67GfYcgB4Oufp2CCcGQQDd8prw1pLPvub68hlhH5lyuEfGJbgLSzBIdB6DxWfgVfk5/KoPYFjtboysK8AoaR4C5akIVa9HuDYOkxuWIbJpAaL0cwkghgCiMPvmFIKYhPl3Q2HhdvwbdF5TRear0WVdHbqsl8NqowpWaVpYp+tgk94Am8wm2PKafhfCYU0Z7IctLjN5fW7YT0059mFxOTxExfAUn4BP5WH4V+/H8NodBJCL0fU8jJOlYrw8CWGqVZio/QSTdQsxrWkWZugjMfP6FMy6MQlzbk7AvDsE8M6eu+icUIPOa+tgmSSHZYoKXTZqCUAHq/RGWGcYZYawzSKQ30DYLz0L64C1P5o8vjA+OHTB4CH8At7iA6T9BLAbw2q2Y0TtFoyRplIF1iNIHo9QVRwmaReTFiKykQFMQ3RLJAFEEEAY5t0KhkU3MtJpbT06r5Oh83olAWhhSQBd0hpgtYnEIEwgz4Kwiy+DzegNsHSfdtTk74Xhmn/wuqfwELxEB+FDAEOqCKA6HyNr0jCqZgPG1a9GkCwWoYolmKBciImqOQQQjaimSETrIxDTMhFzbgRj7s3xsHDgNRKADJ2SlASgRucUDSw36GCZ2vAIYtNzINZVk/n1sBnPQ6f3RyWY/L0w3lu+5oinkLIvKoKveAf8xLkYXpWBkZIUjKpeh9E1qxEoXYFg2WJMUMxGuHIWJmuiEKmbgqjGiYhuCkGMPgjTZaNaLV5dq8CrZL5Tkgqd1msIQIvODGDjIwgHGsh9Chrgt0sHv930rr+V5n4ejZHQbNgEZcE2JJ8BxJv8vTBs3d7396rYCZ+KLfAVbeUAhorTEFCVRAAJBBCHwLplCJbOR5gshgBiMEUzFZGacExvCDcCNAchYMfAMxYd16kJQIVXk9UcQKcUHQfANGavFoVXNCitVUGhVECnUXJi22USGQqPliBwzWHYTthGAB+tMvl7YfRcPb3IW1BgBKjYDD8RjwMYIU7AKMkajK1egvG1CwlgLgHMRLg8EpOUkZiqDsM0bRiidEGY0RBosHmjyzsEoAIHkawhaQlCC/cCDb4Qa3HzejNukRq0KqgU9VCaxLbZvls3mrlzTl6pwsCoTKnJ3wtj4Dleqzc/jwByCSAL/sKNGCZKwghRPEZVrcJoyVIE1sxBiDQGIXXTMUE2DRPl4ZgkD8MUZTCmqcfRwsaTz92sQ6K8rWOSGh2TtBxARJESDTotWpobIJfLOKlVCtqnho5MMzVo1VAr5ZDLpJyu6xug1WoQEhI0k7vp78Rb84Mzvcq30BqDzAtS4SdYD/+KFAwTJmK4cCVGVsZijGQRxlXPRlBtNEIJIKxuMibKwhChCOUAIurGPlofd1hZ1frKOg0BaDCJzN+6oecMM+MquZRaRoW6WgnOnDqJA5/u5cS2pbXV3DElnSOX1dM1cq4aoSHBMaZbPxWdXZzeGVy62eBVxoN3eTqtN1IIYB38BQlkfhUHMEq8CGOq5mJMZQwCJdMRXBNBAJMwoS4ME+tDEC4Z+5P169Q67RF1gP/KWg3cctRc5tUq6nEyz4wxg2XXriA3m4f01A3I3JTKiW3nbc4Cv+xaO4RCziAU0KoVP/fu/bcBprs/EQzA82pqm1dZOnzKN8K3PIle4RMJIJ7Mr0CAcBFGCZn5WRhbGYXAqqkIqY1AaG04wqVhGF8y+r7VE+ZZeEbHdqQKnBTI2tuGGdKqlZDQgmMzLwNZGZs4iJysTE5sm+1j2zUSMTRkXEUArBLX9Y04cvigxHT3p6LrCLepXlfXt/mWr8OQ8gT4lccTQByGVywmgAUEMBsfiWZjrHg6AUxGcHU4QmtCDV45g5+/mB+5TWm4Ta3DtY2CARgH6ZFDB5CRtpEzzEDMAGzbXJXjRz7jzmXXsGsZBGslvyG+Y023f2a8PW9E5qDD8/U+l5f9NJS/DMMFHyOgYj5GVszBaNEMUqRhRHHofbe17kVWPax+/0etrcWSH2/eaGnPvhFCiu1bC7hMP27+cQheehp2bd9KA9oMbhwPt+heObl5xabb/7VhZWVlw6+oaGUzi9KUfWZIIavDti35vwvAjm0vLOCMs2vYtUyNOg2uVUgMnR1e+8D0NX9d9Ond253m9V9ZBs0yjgEF9u3ZxQ1as+HHzbNPdmx/0R7u4WauHBODkVEl+i04ZLDsF55p+qq/Jnx8vD+iHjZQ5gysAtwDi8ywvr5y+QLX548P4MfFjl27cukxAGMFGARLwNCVx2A/aQ/sQgpaO3Z7/0/93v+qU09/y3eHPv3PD0/PwQHMAKsCAzD2sxGCmTh25BA2bUxpbyUm1vts34njR6DVKNrNP95G7J5mAE4Td8MuOK/VauCMog5WXf/jX5q79AnKtAtYq3cKyoVTUA6segc+WdFevXp+SP3+C325gUyQHkGYTZ0/ewY7tm5Bfk42p53bC3Hx3FmaPuVPnPeohdhTuh6uCz57AsB+4i44hO/kZD8+p9V2RILMxn8Fv3OvgNjOvUbEWpKsPeeesfVdxrcfl9HqEJRncAzOAxMDcBy/2fCq07tPVtLS0rJL2bWSr4xtJKWxYDbz6J2nuUkLubQWFeWlqOCXQl5fy+1jx34LYBzEapSKqtFtatFzARwm7CBtJ22DQxjTVjiGFpK2wDGEqYCM53PmzQDWbpOf/R+bgvzc0/TS9isZ+5kZYSZY+zBjly+ex6d7d6MwP7e9Amyb7SuhY2oyzc5l17BrzdNo4fFS2EfsfWkAdv4rZSa7T0fAiOGh7B2IANqoCgbqX4NYyMfObYXcg4zNNtmZ6SZlcJ9sHzvG2qlSJDC9UhifxuwNdkzCiZcGwMaAyeqzo0OHDq+c+Pxovb5Jx7LYxi+7ykwaeJvSnjsDMbFjDGQzLxOC8mvcexR7HTl+UUjmqX1eAsALzZujX9++g5sbtb/Qu01bNi/9F5ZlMmlg5h5/BphlnJEYRJZxhsriobZGgsYGHQYuPfpSAGyHxj2/bZ4VUyZHLPj86GGW1V8JoM1kliCMZh+ZNyqHTLO/s+kzk6p14tgRTEv/EnaT9/0pAIfgAkOXPsF/7AHo6eExj16Vfy7My2GZbWMgBPAryVQNk8h0dhZln8dDYV4u8nJzMWRhAewm7oSd2fwfALAfk3a/Y9def+6f3G+9+ebg2GVLq9i70LaCPG7mMWaeQWQY2Dbbx46xc2J5RXg7SQS2MLKcXwyb8O2cWaN5Ms70AgD78Vmt7DlgsvByws21X/ismdFfJK9NvM0qwRYxTGw7ef2Gb2Zt2PWj6/prhg6JanSgRRFbGHGru0QlLJeUwjqansSUWXsyzImq4xBOxk2AdtMOwG5kUgt7kJm+8q+JTp06Wbu4uPR5/71eAUxsm/ZZmQ5ziyKLqP18C1qedkhQtDEI8zKVrbU7r66DZbwEVrECOK64+strS4u/6zG9QGS6+k+EhcW/ATYQWRgk5YDdAAAAAElFTkSuQmCC" InformativeScreenshot="23888ad13630467e830fa713f2d4b08b.png" Selector="&lt;html app='msedge.exe' title='New InPrivate tab' /&gt;" Title="New InPrivate tab" Url="edge://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
