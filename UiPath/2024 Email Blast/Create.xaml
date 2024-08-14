@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Create" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="611,2156" sap2010:WorkflowViewState.IdRef="Create_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Create" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1239,2174" sap2010:WorkflowViewState.IdRef="Create_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -40,6 +40,8 @@
       <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -98,23 +100,27 @@
       <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create" sap:VirtualizedContainerService.HintSize="621,2091" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Create" sap:VirtualizedContainerService.HintSize="765,2109" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="WhichEmail" />
       <Variable x:TypeArguments="x:String" Name="TfFileName" />
       <Variable x:TypeArguments="x:String" Name="FirstChoice" />
+      <Variable x:TypeArguments="x:String" Name="Sheet" />
+      <Variable x:TypeArguments="x:String" Name="Email" />
+      <Variable x:TypeArguments="x:String" Name="NowWhat" />
+      <Variable x:TypeArguments="x:String" Name="SheetName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="579,332" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Do you need to create a new workbook or spreadsheet" OptionsString="Workbook;Spreadsheet" Title="Workbook">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="723,324" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Do you need to create a new workbook or spreadsheet" OptionsString="Workbook;Spreadsheet;Sheet" Title="Workbook">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[FirstChoice]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[FirstChoice]" sap:VirtualizedContainerService.HintSize="579,1694" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[FirstChoice]" sap:VirtualizedContainerService.HintSize="723,1720" sap2010:WorkflowViewState.IdRef="Switch`1_3">
       <Sequence x:Key="Workbook" sap:VirtualizedContainerService.HintSize="416,80" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -122,58 +128,97 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Sequence>
-      <Sequence x:Key="Spreadsheet" sap:VirtualizedContainerService.HintSize="539,1463" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <Sequence x:Key="Spreadsheet" sap:VirtualizedContainerService.HintSize="621,1962" sap2010:WorkflowViewState.IdRef="Sequence_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,332" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which email do you want to use?" OptionsString="hubertmaxwell34@gmail.com;rubydetha@gmail.com;chris.maxwell@kw.com" Title="Email">
+        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="579,324" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which email do you want to use?" OptionsString="hubertmaxwell34@gmail.com;rubydetha@gmail.com;chris.maxwell@kw.com" Title="Email">
           <ui:InputDialog.Result>
             <OutArgument x:TypeArguments="x:String">[WhichEmail]</OutArgument>
           </ui:InputDialog.Result>
         </ui:InputDialog>
-        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WhichEmail]" sap:VirtualizedContainerService.HintSize="497,1066" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-          <Sequence x:Key="hubertmaxwell34@gmail.com" sap:VirtualizedContainerService.HintSize="416,570" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WhichEmail]" sap:VirtualizedContainerService.HintSize="579,1573" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+          <Sequence x:Key="hubertmaxwell34@gmail.com" sap:VirtualizedContainerService.HintSize="539,1320" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="WhatsNext" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="374,279" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="What are you going to name the file?(no spaces)" Title="File">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="What are you going to name the file?(no spaces)" Title="File">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[TfFileName]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryParentFolderId="{x:Null}" NewSpreadsheet="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Fail" ConnectionId="17451300-10ac-4560-8eb2-88a55d9d8876" DisplayName="Create Spreadsheet" FirstSheetName="Sheet1" sap:VirtualizedContainerService.HintSize="374,226" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_1" ParentFolderInputMode="Browse" SpreadsheetName="[TfFileName]" UseConnectionService="True">
-              <uga:CreateSpreadsheetConnections.FolderIdBackup>
-                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
-                  <usau:BackupSlot.BackupValues>
-                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-                  </usau:BackupSlot.BackupValues>
-                </usau:BackupSlot>
-              </uga:CreateSpreadsheetConnections.FolderIdBackup>
+            <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualEntryParentFolderId="{x:Null}" NewSpreadsheet="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Fail" ConnectionId="17451300-10ac-4560-8eb2-88a55d9d8876" DisplayName="Create Spreadsheet" FirstSheetName="Sheet1" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_1" ParentFolderInputMode="Browse" SpreadsheetName="[TfFileName]" UseConnectionService="True">
+              <uga:CreateSpreadsheetConnections.Item>
+                <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="root" InputMode="Browse">
+                  <ugam:DriveItemArgument.Backup>
+                    <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </ugam:DriveItemArgument.Backup>
+                  <ugam:DriveItemArgument.FullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.FullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:CreateSpreadsheetConnections.Item>
             </uga:CreateSpreadsheetConnections>
+            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="What Do You Want To Do" OptionsString="Create Another Spreadsheet;Main Menu;Finished" Title="Now What">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[WhatsNext]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[WhatsNext]" sap:VirtualizedContainerService.HintSize="497,425" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Create Another Spreadsheet" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Create.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Main.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <x:Null x:Key="Finished" />
+            </Switch>
           </Sequence>
-          <Sequence x:Key="rubydetha@gmail.com" sap:VirtualizedContainerService.HintSize="416,813" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence x:Key="rubydetha@gmail.com" sap:VirtualizedContainerService.HintSize="416,805" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="374,279" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="What are you going to name the file?(no spaces)" Title="File">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="374,271" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="What are you going to name the file?(no spaces)" Title="File">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[TfFileName]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryParentFolderId="{x:Null}" NewSpreadsheet="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Fail" ConnectionId="87800dd6-fcf3-4c28-81ac-48309ec12e20" DisplayName="Create Spreadsheet" FirstSheetName="Sheet1" sap:VirtualizedContainerService.HintSize="374,243" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_2" ParentFolderInputMode="Browse" SpreadsheetName="[TfFileName]" UseConnectionService="True">
-              <uga:CreateSpreadsheetConnections.FolderIdBackup>
-                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
-                  <usau:BackupSlot.BackupValues>
-                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-                  </usau:BackupSlot.BackupValues>
-                </usau:BackupSlot>
-              </uga:CreateSpreadsheetConnections.FolderIdBackup>
+            <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID1}" ManualEntryParentFolderId="{x:Null}" NewSpreadsheet="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Fail" ConnectionId="87800dd6-fcf3-4c28-81ac-48309ec12e20" DisplayName="Create Spreadsheet" FirstSheetName="Sheet1" sap:VirtualizedContainerService.HintSize="374,243" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_2" ParentFolderInputMode="Browse" SpreadsheetName="[TfFileName]" UseConnectionService="True">
+              <uga:CreateSpreadsheetConnections.Item>
+                <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="root" InputMode="Browse">
+                  <ugam:DriveItemArgument.Backup>
+                    <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </ugam:DriveItemArgument.Backup>
+                  <ugam:DriveItemArgument.FullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.FullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:CreateSpreadsheetConnections.Item>
             </uga:CreateSpreadsheetConnections>
             <umae:AddSheetConnections BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" NewSheetName="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="f366179ac9550b6f" BrowserItemFriendlyName="NewCountry.xlsx" BrowserItemId="F366179AC9550B6F!110" ConnectionId="a64aebee-ad18-4257-9fa0-fccfb02dba81" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="374,226" sap2010:WorkflowViewState.IdRef="AddSheetConnections_1" ItemSelectionMode="Browse" SheetName="[TfFileName]" UseConnectionService="True">
               <umae:AddSheetConnections.BrowserDriveName>
@@ -191,26 +236,335 @@
               </umae:AddSheetConnections.ItemIdBackup>
             </umae:AddSheetConnections>
           </Sequence>
-          <Sequence x:Key="chris.maxwell@kw.com" sap:VirtualizedContainerService.HintSize="416,570" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence x:Key="chris.maxwell@kw.com" sap:VirtualizedContainerService.HintSize="416,562" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="374,279" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="What are you going to name the file?(no spaces)" Title="File">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="374,271" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="What are you going to name the file?(no spaces)" Title="File">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[TfFileName]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryParentFolderId="{x:Null}" NewSpreadsheet="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Fail" ConnectionId="16198c5d-e79e-4506-aaa3-e946229689df" DisplayName="Create Spreadsheet" FirstSheetName="Sheet1" sap:VirtualizedContainerService.HintSize="374,226" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_3" ParentFolderInputMode="Browse" SpreadsheetName="[TfFileName]" UseConnectionService="True">
-              <uga:CreateSpreadsheetConnections.FolderIdBackup>
-                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
-                  <usau:BackupSlot.BackupValues>
-                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-                  </usau:BackupSlot.BackupValues>
-                </usau:BackupSlot>
-              </uga:CreateSpreadsheetConnections.FolderIdBackup>
+            <uga:CreateSpreadsheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID2}" ManualEntryParentFolderId="{x:Null}" NewSpreadsheet="{x:Null}" ParentFolderExisting="{x:Null}" AuthScopesInvalid="False" BrowserParentFolderFriendlyName="My Drive" BrowserParentFolderId="root" ConflictResolution="Fail" ConnectionId="16198c5d-e79e-4506-aaa3-e946229689df" DisplayName="Create Spreadsheet" FirstSheetName="Sheet1" sap:VirtualizedContainerService.HintSize="374,226" sap2010:WorkflowViewState.IdRef="CreateSpreadsheetConnections_3" ParentFolderInputMode="Browse" SpreadsheetName="[TfFileName]" UseConnectionService="True">
+              <uga:CreateSpreadsheetConnections.Item>
+                <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FriendlyName="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="root" InputMode="Browse">
+                  <ugam:DriveItemArgument.Backup>
+                    <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </ugam:DriveItemArgument.Backup>
+                  <ugam:DriveItemArgument.FullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.FullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:CreateSpreadsheetConnections.Item>
             </uga:CreateSpreadsheetConnections>
+          </Sequence>
+        </Switch>
+      </Sequence>
+      <Sequence x:Key="Sheet" sap:VirtualizedContainerService.HintSize="683,1427" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="641,324" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="Which Email" OptionsString="hubertmaxwell34@gmail.com;rubydetha@gmail.com" Title="email">
+          <ui:InputDialog.Result>
+            <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
+          </ui:InputDialog.Result>
+        </ui:InputDialog>
+        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Email]" sap:VirtualizedContainerService.HintSize="641,1038" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+          <Sequence x:Key="hubertmaxwell34@gmail.com" sap:VirtualizedContainerService.HintSize="601,829" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="559,791" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InputDialog Options="{x:Null}" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="What sheet" OptionsString="Everything;Instrumental;Pop;Soul;Rock;Hip Hop" Title="Sheet Name">
+                <ui:InputDialog.Result>
+                  <OutArgument x:TypeArguments="x:String">[Sheet]</OutArgument>
+                </ui:InputDialog.Result>
+              </ui:InputDialog>
+              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Sheet]" sap:VirtualizedContainerService.HintSize="497,379" sap2010:WorkflowViewState.IdRef="Switch`1_5">
+                <Sequence x:Key="Everything" sap:VirtualizedContainerService.HintSize="492,113" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_8" IsPassword="False" Label="What is the name of the sheet" Title="Sheet Name">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                    <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Everything" BrowserItemId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="AddSheetConnections_2" ItemSelectionMode="Browse" SheetName="[SheetName]" UseConnectionService="True">
+                      <uga:AddSheetConnections.FileIdBackup>
+                        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </uga:AddSheetConnections.FileIdBackup>
+                      <uga:AddSheetConnections.Item>
+                        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Everything" FullPathHint="My Drive/Everything" InputMode="Browse" />
+                      </uga:AddSheetConnections.Item>
+                    </uga:AddSheetConnections>
+                    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="Now What do you want to do" OptionsString="Back to the top;Main Menu;Finished" Title="Now">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[NowWhat]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NowWhat]" sap:VirtualizedContainerService.HintSize="497,207" sap2010:WorkflowViewState.IdRef="Switch`1_7">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Back to the top" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Create.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Main.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <x:Null x:Key="Finished" />
+                    </Switch>
+                  </Sequence>
+                </Sequence>
+                <Sequence x:Key="Instrumental" sap:VirtualizedContainerService.HintSize="416,58" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="What is the name of the sheet" Title="Sheet Name">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Everything" BrowserItemId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="AddSheetConnections_3" ItemSelectionMode="Browse" SheetName="[SheetName]" UseConnectionService="True">
+                    <uga:AddSheetConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:AddSheetConnections.FileIdBackup>
+                    <uga:AddSheetConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Everything" FullPathHint="My Drive/Everything" InputMode="Browse" />
+                    </uga:AddSheetConnections.Item>
+                  </uga:AddSheetConnections>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_12" IsPassword="False" Label="Now What do you want to do" OptionsString="Back to the top;Main Menu;Finished" Title="Now">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[NowWhat]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NowWhat]" sap:VirtualizedContainerService.HintSize="497,207" sap2010:WorkflowViewState.IdRef="Switch`1_8">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Back to the top" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Create.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Main.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <x:Null x:Key="Finished" />
+                  </Switch>
+                </Sequence>
+                <Sequence x:Key="Pop" sap:VirtualizedContainerService.HintSize="416,58" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_13" IsPassword="False" Label="What is the name of the sheet" Title="Sheet Name">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Everything" BrowserItemId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="AddSheetConnections_4" ItemSelectionMode="Browse" SheetName="[SheetName]" UseConnectionService="True">
+                    <uga:AddSheetConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID5" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:AddSheetConnections.FileIdBackup>
+                    <uga:AddSheetConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID5}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Everything" FullPathHint="My Drive/Everything" InputMode="Browse" />
+                    </uga:AddSheetConnections.Item>
+                  </uga:AddSheetConnections>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_14" IsPassword="False" Label="Now What do you want to do" OptionsString="Back to the top;Main Menu;Finished" Title="Now">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[NowWhat]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NowWhat]" sap:VirtualizedContainerService.HintSize="497,207" sap2010:WorkflowViewState.IdRef="Switch`1_9">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Back to the top" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Create.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Main.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <x:Null x:Key="Finished" />
+                  </Switch>
+                </Sequence>
+                <Sequence x:Key="Soul" sap:VirtualizedContainerService.HintSize="416,58" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_15" IsPassword="False" Label="What is the name of the sheet" Title="Sheet Name">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Everything" BrowserItemId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="AddSheetConnections_5" ItemSelectionMode="Browse" SheetName="[SheetName]" UseConnectionService="True">
+                    <uga:AddSheetConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:AddSheetConnections.FileIdBackup>
+                    <uga:AddSheetConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID6}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Everything" FullPathHint="My Drive/Everything" InputMode="Browse" />
+                    </uga:AddSheetConnections.Item>
+                  </uga:AddSheetConnections>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_16" IsPassword="False" Label="Now What do you want to do" OptionsString="Back to the top;Main Menu;Finished" Title="Now">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[NowWhat]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NowWhat]" sap:VirtualizedContainerService.HintSize="497,207" sap2010:WorkflowViewState.IdRef="Switch`1_10">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Back to the top" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Create.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Main.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <x:Null x:Key="Finished" />
+                  </Switch>
+                </Sequence>
+                <Sequence x:Key="Rock" sap:VirtualizedContainerService.HintSize="416,58" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_17" IsPassword="False" Label="What is the name of the sheet" Title="Sheet Name">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Everything" BrowserItemId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="AddSheetConnections_6" ItemSelectionMode="Browse" SheetName="[SheetName]" UseConnectionService="True">
+                    <uga:AddSheetConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID7" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:AddSheetConnections.FileIdBackup>
+                    <uga:AddSheetConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID7}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Everything" FullPathHint="My Drive/Everything" InputMode="Browse" />
+                    </uga:AddSheetConnections.Item>
+                  </uga:AddSheetConnections>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_18" IsPassword="False" Label="Now What do you want to do" OptionsString="Back to the top;Main Menu;Finished" Title="Now">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[NowWhat]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NowWhat]" sap:VirtualizedContainerService.HintSize="497,207" sap2010:WorkflowViewState.IdRef="Switch`1_11">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Back to the top" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Create.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Main.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <x:Null x:Key="Finished" />
+                  </Switch>
+                </Sequence>
+                <Sequence x:Key="Hip Hop" sap:VirtualizedContainerService.HintSize="416,58" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,271" sap2010:WorkflowViewState.IdRef="InputDialog_19" IsPassword="False" Label="What is the name of the sheet" Title="Sheet Name">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uga:AddSheetConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" NewSheetName="{x:Null}" PositionIndex="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Everything" BrowserItemId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionId="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" DisplayName="Add Sheet" sap:VirtualizedContainerService.HintSize="497,235" sap2010:WorkflowViewState.IdRef="AddSheetConnections_7" ItemSelectionMode="Browse" SheetName="[SheetName]" UseConnectionService="True">
+                    <uga:AddSheetConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID8" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:AddSheetConnections.FileIdBackup>
+                    <uga:AddSheetConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID8}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1qQFEziAVlTbdD6BYKN56TNBTsv5jtZ86U-ayWkhXRA8" ConnectionKey="9e8e9c34-4954-4fc0-86d8-e20e670dfd36" FriendlyName="Everything" FullPathHint="My Drive/Everything" InputMode="Browse" />
+                    </uga:AddSheetConnections.Item>
+                  </uga:AddSheetConnections>
+                  <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,324" sap2010:WorkflowViewState.IdRef="InputDialog_20" IsPassword="False" Label="Now What do you want to do" OptionsString="Back to the top;Main Menu;Finished" Title="Now">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[NowWhat]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NowWhat]" sap:VirtualizedContainerService.HintSize="497,207" sap2010:WorkflowViewState.IdRef="Switch`1_12">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Back to the top" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Create.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="Main Menu" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Main.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <x:Null x:Key="Finished" />
+                  </Switch>
+                </Sequence>
+              </Switch>
+            </Sequence>
           </Sequence>
         </Switch>
       </Sequence>
