@@ -4926,7 +4926,7 @@
           }
         }
       },
-      "UiPath.GSuite.Activities/2.6.23": {
+      "UiPath.GSuite.Activities/2.7.11-preview": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
@@ -4942,13 +4942,13 @@
           "MimeKit": "2.10.0",
           "Newtonsoft.Json": "13.0.3",
           "NodaTime": "2.4.7",
-          "System.Activities.ViewModels": "1.0.0-20240403.2",
+          "System.Activities.ViewModels": "1.0.0-20240418.6",
           "System.ComponentModel.Annotations": "5.0.0",
           "System.Linq.Async.Queryable": "6.0.1",
           "System.Security.Cryptography.ProtectedData": "5.0.0",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
-          "UiPath.CodedWorkflows": "24.4.0-preview",
-          "UiPath.ConnectionClient": "2.0.3",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.ConnectionClient": "2.0.4",
           "UiPath.Platform": "24.2.0",
           "UiPath.Telemetry.Client": "2.1.3"
         },
@@ -5264,19 +5264,19 @@
           }
         }
       },
-      "UiPath.MicrosoftOffice365.Activities/2.6.24": {
+      "UiPath.MicrosoftOffice365.Activities/2.7.11-preview": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.95.4",
           "Microsoft.Graph": "4.11.0",
           "Newtonsoft.Json": "13.0.3",
-          "System.Activities.ViewModels": "1.0.0-20240403.2",
+          "System.Activities.ViewModels": "1.0.0-20240418.6",
           "System.ComponentModel.Annotations": "5.0.0",
           "System.Linq.Async.Queryable": "6.0.1",
           "System.Text.Json": "6.0.9",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
-          "UiPath.CodedWorkflows": "24.4.0-preview",
-          "UiPath.ConnectionClient": "2.0.3",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.ConnectionClient": "2.0.4",
           "UiPath.Platform": "24.2.0",
           "UiPath.Telemetry.Client": "2.1.3"
         },
@@ -11134,7 +11134,7 @@
           }
         }
       },
-      "UiPath.GSuite.Activities/2.6.23": {
+      "UiPath.GSuite.Activities/2.7.11-preview": {
         "type": "package",
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.55.0.2554",
@@ -11150,13 +11150,13 @@
           "MimeKit": "2.10.0",
           "Newtonsoft.Json": "13.0.3",
           "NodaTime": "2.4.7",
-          "System.Activities.ViewModels": "1.0.0-20240403.2",
+          "System.Activities.ViewModels": "1.0.0-20240418.6",
           "System.ComponentModel.Annotations": "5.0.0",
           "System.Linq.Async.Queryable": "6.0.1",
           "System.Security.Cryptography.ProtectedData": "5.0.0",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
-          "UiPath.CodedWorkflows": "24.4.0-preview",
-          "UiPath.ConnectionClient": "2.0.3",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.ConnectionClient": "2.0.4",
           "UiPath.Platform": "24.2.0",
           "UiPath.Telemetry.Client": "2.1.3"
         },
@@ -11472,19 +11472,19 @@
           }
         }
       },
-      "UiPath.MicrosoftOffice365.Activities/2.6.24": {
+      "UiPath.MicrosoftOffice365.Activities/2.7.11-preview": {
         "type": "package",
         "dependencies": {
           "ClosedXML": "0.95.4",
           "Microsoft.Graph": "4.11.0",
           "Newtonsoft.Json": "13.0.3",
-          "System.Activities.ViewModels": "1.0.0-20240403.2",
+          "System.Activities.ViewModels": "1.0.0-20240418.6",
           "System.ComponentModel.Annotations": "5.0.0",
           "System.Linq.Async.Queryable": "6.0.1",
           "System.Text.Json": "6.0.9",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
-          "UiPath.CodedWorkflows": "24.4.0-preview",
-          "UiPath.ConnectionClient": "2.0.3",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.ConnectionClient": "2.0.4",
           "UiPath.Platform": "24.2.0",
           "UiPath.Telemetry.Client": "2.1.3"
         },
@@ -22068,10 +22068,10 @@
         "uipath.excel.activities.nuspec"
       ]
     },
-    "UiPath.GSuite.Activities/2.6.23": {
-      "sha512": "GW1ugqgojvN7RYlHBQnA8/PWRae4mAQJBwxjSBK3AHYGN6/YUamztWjS3eywwaWyNoWZcbogW8m8RcXtjaqBTA==",
+    "UiPath.GSuite.Activities/2.7.11-preview": {
+      "sha512": "sS/AYL2RsSl0xPvgLa7bu66c3m4MyxIb+RU2uR88VHTU5xum3GG11AmQ6lCt/H/EJSETLhYOey3Y2nQH/zM11Q==",
       "type": "package",
-      "path": "uipath.gsuite.activities/2.6.23",
+      "path": "uipath.gsuite.activities/2.7.11-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -22202,7 +22202,7 @@
         "lib/net6.0/zh-TW/UiPath.GSuite.resources.dll",
         "lib/net6.0/zu/UiPath.GSuite.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.GSuite.resources.dll",
-        "uipath.gsuite.activities.2.6.23.nupkg.sha512",
+        "uipath.gsuite.activities.2.7.11-preview.nupkg.sha512",
         "uipath.gsuite.activities.nuspec"
       ]
     },
@@ -22485,10 +22485,10 @@
         "uipath.mail.activities.nuspec"
       ]
     },
-    "UiPath.MicrosoftOffice365.Activities/2.6.24": {
-      "sha512": "dCFlCc5fY2ydd6oZpQf9aM7ErY25i4XTVYl4uO6yWKJUZpOT5MdCt+SP+XCbHTjhN1VCOkApaZLJqC31RNj+Iw==",
+    "UiPath.MicrosoftOffice365.Activities/2.7.11-preview": {
+      "sha512": "SowDSUKNCSJaPHpKXU2GvPehtrtR7ul4xiE9hdFGCxTVww/OW9RABASOgTslbLH9qWfrBJBk6ys97J+Kd3skPw==",
       "type": "package",
-      "path": "uipath.microsoftoffice365.activities/2.6.24",
+      "path": "uipath.microsoftoffice365.activities/2.7.11-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -22619,7 +22619,7 @@
         "lib/net6.0/zh-TW/UiPath.MicrosoftOffice365.resources.dll",
         "lib/net6.0/zu/UiPath.MicrosoftOffice365.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.MicrosoftOffice365.resources.dll",
-        "uipath.microsoftoffice365.activities.2.6.24.nupkg.sha512",
+        "uipath.microsoftoffice365.activities.2.7.11-preview.nupkg.sha512",
         "uipath.microsoftoffice365.activities.nuspec"
       ]
     },
@@ -23915,9 +23915,9 @@
     "net8.0-windows7.0": [
       "UiPath.Database.Activities >= 1.8.2-preview <= 1.8.2-preview",
       "UiPath.Excel.Activities >= 2.23.4 <= 2.23.4",
-      "UiPath.GSuite.Activities >= 2.6.23 <= 2.6.23",
+      "UiPath.GSuite.Activities >= 2.7.11-preview <= 2.7.11-preview",
       "UiPath.Mail.Activities >= 1.23.10 <= 1.23.10",
-      "UiPath.MicrosoftOffice365.Activities >= 2.6.24 <= 2.6.24",
+      "UiPath.MicrosoftOffice365.Activities >= 2.7.11-preview <= 2.7.11-preview",
       "UiPath.System.Activities >= 24.10.4 <= 24.10.4",
       "UiPath.Testing.Activities >= 24.10.0 <= 24.10.0",
       "UiPath.UIAutomation.Activities >= 24.10.2 <= 24.10.2"
@@ -23950,7 +23950,7 @@
           "UiPath.GSuite.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.6.23, 2.6.23]"
+            "version": "[2.7.11-preview, 2.7.11-preview]"
           },
           "UiPath.Mail.Activities": {
             "include": "Runtime",
@@ -23960,7 +23960,7 @@
           "UiPath.MicrosoftOffice365.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[2.6.24, 2.6.24]"
+            "version": "[2.7.11-preview, 2.7.11-preview]"
           },
           "UiPath.System.Activities": {
             "include": "Runtime",

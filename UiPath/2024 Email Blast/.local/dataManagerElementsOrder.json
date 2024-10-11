@@ -12,7 +12,6 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "TsunamiCreate&Sequence_2",
         "CreatedSpreadSheet&Sequence_1",
         "MMO&Sequence_1"
       ],
@@ -35,11 +34,6 @@
       "Path": "Create.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "SheetName&Sequence_1",
-        "NowWhat&Sequence_1",
-        "Email&Sequence_1",
-        "Sheet&Sequence_1",
-        "WhatsNext&Sequence_2",
         "FirstChoice&Sequence_1",
         "WhichEmail&Sequence_1",
         "TfFileName&Sequence_1"
@@ -62,31 +56,6 @@
       "Path": "New Spreadsheet Entry.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Albums&Sequence_4",
-        "Singles&Sequence_4",
-        "Both&Sequence_4",
-        "SomeSpreadSheetShit&Sequence_1",
-        "Extras&Sequence_1",
-        "Comments&Sequence_1",
-        "Discord&Sequence_1",
-        "Reddit&Sequence_1",
-        "Youtube&Sequence_1",
-        "Twitch&Sequence_1",
-        "TikTok&Sequence_1",
-        "Instagram&Sequence_1",
-        "Facebook&Sequence_1",
-        "X&Sequence_1",
-        "CountryName&Sequence_1",
-        "StateName&Sequence_1",
-        "ZipCode&Sequence_1",
-        "CityName&Sequence_1",
-        "StreetAddress&Sequence_1",
-        "PhoneNumber&Sequence_1",
-        "EmailName&Sequence_1",
-        "PersonName&Sequence_1",
-        "companyname&Sequence_1",
-        "ChooseIt&Sequence_1",
-        "TheEmail&Sequence_1",
         "WhoToSend&Sequence_1",
         "NewEntries&Sequence_1"
       ],
@@ -95,41 +64,11 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Market Options.xaml",
+      "Path": "Email.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "Market&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Website.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "Website&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Physical.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "Physical&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "CD.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
   ]
