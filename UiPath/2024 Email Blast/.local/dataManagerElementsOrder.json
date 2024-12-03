@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "TsunamiCreate&Sequence_2",
         "CreatedSpreadSheet&Sequence_1",
         "MMO&Sequence_1"
       ],
@@ -34,6 +35,11 @@
       "Path": "Create.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Sheet&Sequence_1",
+        "Email&Sequence_1",
+        "NowWhat&Sequence_1",
+        "SheetName&Sequence_1",
+        "WhatsNext&Sequence_2",
         "FirstChoice&Sequence_1",
         "WhichEmail&Sequence_1",
         "TfFileName&Sequence_1"
